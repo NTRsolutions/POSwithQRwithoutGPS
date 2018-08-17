@@ -1,0 +1,71 @@
+June 14 2018
+
+Remove GPS Module (hide dialog) --- done
+Change Return value of GetDate time in util --- done
+Run gps in application since if we login immediately it will shut off gps --- done
+update time in application class --- done
+Mac Address entry in status table--- done
+MAC address while transfer data --- done
+MAC address while Push data --- done
+MAC address while Push Self data --- done
+
+
+v2.1.11
+June 20
+score not entering issue --- done
+
+v2.1.12
+June 21
+wordEntry method in jsinterface --- done
+video questions module --- done
+files affected --- cardadapter,playvideo, jsinterface 
+send nodelist from cardadapter to play video --- done
+disable media controller if video json found --- done
+dialog of questions when video paused --- done
+update wordEntry logic again --- done
+
+
+June 22
+files affected --- splash, playvideo, pushdata, crlpullpushtransfer, multiphoto, mainactivity, qrlogin
+apk type in status table --- done
+check for nulls in nodelist for questions --- done
+convert time in milis --- done
+if nodelist null then only show mediaplayer in play video --- done
+set all the fields from json --- done
+add to score --- done
+transparent background --- done
+put apktype in push data to server --- done
+put apktype in push self data to server --- done
+put apktype in transfer data --- done
+prathamCode i.e logincode for pos at splash ---- done
+put prathamcode in push data to server --- done
+put prathamcode in push self data to server --- done 
+put prathamcode in transfer data --- done
+prathamCode edit option in dashboard --- done
+show prathamCode in dashboard ---  done
+
+June 23
+age grp in qr -- done
+dont show khelbadi in 8-14 age group ---- done
+show only khelbadi for 5-7 age group --- done
+qr code login show all --- done
+update apktype --- done
+prathamCode validation --- done
+change login image --- done
+
+v2.1.13
+June 25
+backpress main activity action change --- done
+change login images --- done
+change method name age criteria age 3-6 & age 7-14 main activity-- done
+change age limit in age selection age 3-6 & age 7-14 main activity --- done
+
+June 26
+change pull crl api HL & PI --- done
+
+July 05
+Change Share/receive name in admin panel --- done
+
+August 13
+Limit gps entries to 2000 chars --- done
+Default push api is H learning  --- done

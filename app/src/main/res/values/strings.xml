@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Pratham Digital</string>
+    <string name="PushServer">\tPush To Server\t</string>
+    <string name="transferUsage">\tTransfer Usage\t</string>
+    <string name="pull">Pull Data</string>
+    <string name="ReceiveProfiles">\tReceive Profiles\t</string>
+    <string name="title_activity_sync">SyncActivity</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="backdrop_title">PRATHAM DIGITAL</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+
+    <string name="title_activity_main">MultiPhotoSelect</string>
+
+    <string name="permission_rationale">"Storage permission is needed for fetching images from Gallery."</string>
+
+    <!-- Content descriptions -->
+    <string name="universal_child_list">Universal Child List</string>
+
+    <!--FTP MODULE-->
+    <string name="nsd_servername_postfix">FTP Server</string>
+    <string name="storage_warning">Warning: storage is not available. You may want to unmount it.</string>
+    <string name="notification_server_starting">Starting at %s</string>
+    <string name="notification_title">FTP Server is running</string>
+    <string name="notification_text">at %s</string>
+    <string name="ftpIsRunningAt">FTP is running at %s</string>
+    <string name="notification_stop_text">Stop server</string>
+
+    <string name="activity_list_server_title">Favorites servers</string>
+    <string name="activity_add_server_title">Add new favorite</string>
+    <string name="activity_edit_server_title">Edit favorite</string>
+    <string name="activity_edit_server_name">Name</string>
+    <string name="activity_edit_server_hostname">Hostname</string>
+    <string name="activity_edit_server_port">Port</string>
+    <string name="activity_edit_server_is_anonymous">Anonymous connection</string>
+    <string name="activity_edit_server_login">Login</string>
+    <string name="activity_edit_server_password">Password</string>
+    <string name="activity_list_files_selected_item">element selected</string>
+    <string name="activity_list_files_selected_items">elements selected</string>
+    <string name="dialog_create_folder_message">Enter the folder name:</string>
+    <string name="dialog_create_folder_positive_button">Create</string>
+    <string name="dialog_create_folder_negative_button">Cancel</string>
+    <string name="dialog_delete_server_message">The server will be deleted.</string>
+    <string name="dialog_delete_server_positive_button">Delete</string>
+    <string name="dialog_delete_server_negative_button">Cancel</string>
+    <string name="dialog_delete_files_message">The %d files will be deleted.</string>
+    <string name="dialog_delete_files_positive_button">Delete</string>
+    <string name="dialog_delete_files_negative_button">Cancel</string>
+    <string name="recieve_usage">Recieve Usage</string>
+
+</resources>
