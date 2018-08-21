@@ -12,7 +12,6 @@ import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.os.Environment;
 import android.os.Handler;
 import android.os.Looper;
 import android.provider.Settings;
@@ -33,12 +32,6 @@ import org.greenrobot.eventbus.Subscribe;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
@@ -109,6 +102,9 @@ public class SignInActivity extends AppCompatActivity {
                 s.insertInitialData("appName", "Pratham Digital - Second Chance");
             else if (MultiPhotoSelectActivity.programID.equals("4"))
                 s.insertInitialData("appName", "Pratham Digital - Pratham Institute");
+            else
+                s.insertInitialData("appName", "Pratham Digital");
+
         } else {
             s = new StatusDBHelper(this);
             // app name
@@ -120,6 +116,8 @@ public class SignInActivity extends AppCompatActivity {
                 s.Update("appName", "Pratham Digital - Second Chance");
             else if (MultiPhotoSelectActivity.programID.equals("4"))
                 s.Update("appName", "Pratham Digital - Pratham Institute");
+            else
+                s.Update("appName", "Pratham Digital");
         }
 
         String deviceID = "";
@@ -197,7 +195,6 @@ public class SignInActivity extends AppCompatActivity {
         }*/
 
     }
-
 
 
     @Subscribe
