@@ -157,6 +157,10 @@ public class QRLogin extends AppCompatActivity implements ZXingScannerView.Resul
 
     private void setValues() {
 
+        // Start Webview service to handle session tracking
+        startService(new Intent(this, WebViewService.class));
+
+
         MultiPhotoSelectActivity.selectedGroupsScore = "";
         Attendance attendance = null;
 

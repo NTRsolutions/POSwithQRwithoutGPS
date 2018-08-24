@@ -84,8 +84,8 @@ public class PlayVideo extends Activity implements MediaPlayer.OnCompletionListe
             res_id = "SessionTracking";
         }
         if (CardAdapter.vidFlg) {
-            vidDuration = myVideoView.getDuration();
-            res_id = CardAdapter.resId;
+            vidDuration = /*myVideoView.getDuration()*/(int) duration;
+            res_id = res_id + "_" + CardAdapter.resId;
         } else if (assessmentLogin.assessmentFlg) {
             videoStartTime = util.GetCurrentDateTime(false);
             res_id = "Assessment-" + assessmentLogin.crlID;
@@ -135,12 +135,12 @@ public class PlayVideo extends Activity implements MediaPlayer.OnCompletionListe
         Log.d("onPause ::: ", "onPause Called !!!");
         myVideoView.pause();
         MainActivity.sessionFlg = true;
-
-        cd = new CountDownTimer(duration, 1000) {
+        duration = myVideoView.getDuration();
+        MultiPhotoSelectActivity.cd = new CountDownTimer(MultiPhotoSelectActivity.duration, 1000) {
             //cd = new CountDownTimer(duration, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
-                duration = millisUntilFinished;
+                MultiPhotoSelectActivity.duration = millisUntilFinished;
                 timer = true;
             }
 
@@ -175,7 +175,7 @@ public class PlayVideo extends Activity implements MediaPlayer.OnCompletionListe
         MultiPhotoSelectActivity.duration = MultiPhotoSelectActivity.timeout;
         System.out.println("REMAINING TIME FOR VIDEO IS :" + duration);
         if (timer == true) {
-            cd.cancel();
+            MultiPhotoSelectActivity.cd.cancel();
             myVideoView.start();
         }
     }

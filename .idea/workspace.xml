@@ -9,10 +9,26 @@
       </config>
     </shared>
   </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ab24c15-082a-415e-9544-107f250a0e10" name="Default" comment="v2.1.14&#10;August 18&#10;shuffle data --- done&#10;&#10;August 21&#10;Default Pull API HL --- done&#10;Assign Groups else condition to all programid --- done&#10;CrlAddEdit else condition to all programid --- done&#10;MultiPhotoSelect else condition to all programid --- done&#10;Pull Data else condition to all programid --- done&#10;QRLogin else condition to all programid --- done&#10;SignInActivity else condition to all programid --- done">
+    <list default="true" id="1ab24c15-082a-415e-9544-107f250a0e10" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/PullData.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/PullData.java" />
+      <change beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/JSInterface.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/JSInterface.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/PlayVideo.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/PlayVideo.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/QRLogin.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/QRLogin.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/VideoPlay.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/VideoPlay.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,12 +54,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>2.1.13</find>
-      <find>progr</find>
-      <find>programid</find>
-      <find>case</find>
-      <find>updatejs</find>
       <find>visi</find>
+      <find>btn_EditUChildList</find>
+      <find>addScore</find>
+      <find>session</find>
+      <find>score</find>
+      <find>playvideo</find>
+      <find>video</find>
+      <find>ondestr</find>
+      <find>pa</find>
+      <find>onpause</find>
+      <find>web</find>
+      <find>btn</find>
+      <find>intent</find>
+      <find>webview</find>
+      <find>serv</find>
+      <find>ondes</find>
+      <find>sessiontr</find>
+      <find>trac</find>
+      <find>myVideoView</find>
+      <find>onpau</find>
+      <find>duration</find>
+      <find>cd.</find>
+      <find>calc</find>
+      <find>addsc</find>
+      <find>calcu</find>
+      <find>play</find>
+      <find>Play</find>
+      <find>playv</find>
+      <find>PlayVideo</find>
+      <find>cd</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -2118,10 +2158,14 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/splashScreenVideo.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/AssignGroups.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/CrlAddEditScreen.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/QRLogin.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/SignInActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/MultiPhotoSelectActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/PullData.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/QRLogin.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/WebViewService.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/PlayVideo.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/JSInterface.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/VideoPlay.java" />
       </list>
     </option>
   </component>
@@ -2137,7 +2181,7 @@
       <showMembers />
       <showModules />
       <showLibraryContents />
-      <hideEmptyPackages />
+      <hideEmptyPackages AndroidView="true" />
       <abbreviatePackageNames />
       <autoscrollToSource />
       <autoscrollFromSource />
@@ -2146,6 +2190,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane" />
       <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
@@ -2157,21 +2202,20 @@
             <path>
               <item name="POSwithQRwithoutGPS" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
             </path>
             <path>
               <item name="POSwithQRwithoutGPS" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="prathamopenschool" type="cbb59c9e:AndroidPsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2371,34 +2415,41 @@
       <option name="project" value="LOCAL" />
       <updated>1534831709196</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="v2.1.14&#10;August 18&#10;shuffle data --- done&#10;&#10;August 21&#10;Default Pull API HL --- done&#10;Assign Groups else condition to all programid --- done&#10;CrlAddEdit else condition to all programid --- done&#10;MultiPhotoSelect else condition to all programid --- done&#10;Pull Data else condition to all programid --- done&#10;QRLogin else condition to all programid --- done&#10;SignInActivity else condition to all programid --- done&#10;Pull APi based on program id --- done&#10;change dash ui --- done">
+      <created>1534839068040</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1534839068040</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <layout>
-      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.67445743" sideWeight="0.5045386" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.67449665" sideWeight="0.49546143" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.67445743" sideWeight="0.49546143" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19288956" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19288956" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32888147" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32554257" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38590604" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38564274" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -2407,8 +2458,8 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45310137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.59563756" sideWeight="0.5030257" order="13" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -2417,24 +2468,74 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="v2.1.14&#10;August 18&#10;shuffle data --- done" />
     <MESSAGE value="v2.1.14&#10;August 18&#10;shuffle data --- done&#10;&#10;August 21&#10;Default Pull API HL --- done&#10;Assign Groups else condition to all programid --- done&#10;CrlAddEdit else condition to all programid --- done&#10;MultiPhotoSelect else condition to all programid --- done&#10;Pull Data else condition to all programid --- done&#10;QRLogin else condition to all programid --- done&#10;SignInActivity else condition to all programid --- done" />
-    <option name="LAST_COMMIT_MESSAGE" value="v2.1.14&#10;August 18&#10;shuffle data --- done&#10;&#10;August 21&#10;Default Pull API HL --- done&#10;Assign Groups else condition to all programid --- done&#10;CrlAddEdit else condition to all programid --- done&#10;MultiPhotoSelect else condition to all programid --- done&#10;Pull Data else condition to all programid --- done&#10;QRLogin else condition to all programid --- done&#10;SignInActivity else condition to all programid --- done" />
+    <MESSAGE value="v2.1.14&#10;August 18&#10;shuffle data --- done&#10;&#10;August 21&#10;Default Pull API HL --- done&#10;Assign Groups else condition to all programid --- done&#10;CrlAddEdit else condition to all programid --- done&#10;MultiPhotoSelect else condition to all programid --- done&#10;Pull Data else condition to all programid --- done&#10;QRLogin else condition to all programid --- done&#10;SignInActivity else condition to all programid --- done&#10;Pull APi based on program id --- done&#10;change dash ui --- done" />
+    <option name="LAST_COMMIT_MESSAGE" value="v2.1.14&#10;August 18&#10;shuffle data --- done&#10;&#10;August 21&#10;Default Pull API HL --- done&#10;Assign Groups else condition to all programid --- done&#10;CrlAddEdit else condition to all programid --- done&#10;MultiPhotoSelect else condition to all programid --- done&#10;Pull Data else condition to all programid --- done&#10;QRLogin else condition to all programid --- done&#10;SignInActivity else condition to all programid --- done&#10;Pull APi based on program id --- done&#10;change dash ui --- done" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/PlayVideo.java</url>
+          <line>151</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/PlayVideo.java</url>
+          <line>155</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/PlayVideo.java</url>
+          <line>86</line>
+          <properties />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/PlayVideo.java</url>
+          <line>80</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/PlayVideo.java</url>
+          <line>89</line>
+          <properties />
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/PlayVideo.java</url>
+          <line>95</line>
+          <properties />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/PlayVideo.java</url>
+          <line>77</line>
+          <properties />
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="12" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_crl_add_edit_screen.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/MyApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3087">
           <caret line="56" column="40" lean-forward="true" selection-start-line="56" selection-start-column="40" selection-end-line="56" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="921" column="82" lean-forward="false" selection-start-line="921" selection-start-column="82" selection-end-line="921" selection-end-column="82" />
         </state>
       </provider>
     </entry>
@@ -2456,21 +2557,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
           <caret line="84" column="146" lean-forward="false" selection-start-line="84" selection-start-column="137" selection-end-line="84" selection-end-column="146" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/CrlAddEditScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="189" column="0" lean-forward="false" selection-start-line="189" selection-start-column="0" selection-end-line="189" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/QRLogin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="349" column="29" lean-forward="false" selection-start-line="349" selection-start-column="29" selection-end-line="349" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -2481,19 +2567,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/MultiPhotoSelectActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="708" column="41" lean-forward="false" selection-start-line="708" selection-start-column="41" selection-end-line="708" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/PullData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="406">
           <caret line="278" column="0" lean-forward="false" selection-start-line="278" selection-start-column="0" selection-end-line="278" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2504,6 +2581,143 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
           <caret line="43" column="24" lean-forward="false" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/config.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/CrlAddEditScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="60" column="8" lean-forward="false" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_crl_add_edit_screen.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="143" column="0" lean-forward="false" selection-start-line="143" selection-start-column="0" selection-end-line="196" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/ScoreDBHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-510">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/PlayVideoOld.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="33" column="5" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="589" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/CardAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="235" column="40" lean-forward="false" selection-start-line="235" selection-start-column="40" selection-end-line="235" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/AddNewCrl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="248" column="35" lean-forward="true" selection-start-line="248" selection-start-column="35" selection-end-line="248" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/AddNewGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="31" column="7" lean-forward="false" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="54" column="13" lean-forward="false" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/MultiPhotoSelectActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/QRLogin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="161" column="0" lean-forward="true" selection-start-line="159" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/WebViewService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/PlayVideo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="137" column="35" lean-forward="false" selection-start-line="137" selection-start-column="35" selection-end-line="137" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/videoTracking.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="14" column="4" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/WebViewActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="73" column="49" lean-forward="false" selection-start-line="73" selection-start-column="49" selection-end-line="73" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/VideoPlay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="150" column="17" lean-forward="true" selection-start-line="150" selection-start-column="17" selection-end-line="150" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/JSInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="403" column="62" lean-forward="false" selection-start-line="403" selection-start-column="53" selection-end-line="403" selection-end-column="62" />
           <folding />
         </state>
       </provider>
