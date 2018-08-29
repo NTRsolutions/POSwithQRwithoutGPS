@@ -463,7 +463,9 @@ public class splashScreenVideo extends AppCompatActivity {
         boolean wifiMAC = false;
         boolean apkType = false;
         boolean prathamCode = false;
+        boolean loginMode = false;
 
+        loginMode = s.initialDataAvailable("loginMode");
         prathamCode = s.initialDataAvailable("prathamCode");
         wifiMAC = s.initialDataAvailable("wifiMAC");
         gpsFixDuration = s.initialDataAvailable("gpsFixDuration");
@@ -514,6 +516,10 @@ public class splashScreenVideo extends AppCompatActivity {
         if (gpsFixDuration == false) {
             s = new StatusDBHelper(this);
             s.insertInitialData("gpsFixDuration", "");
+        }
+        if (loginMode == false) {
+            s = new StatusDBHelper(this);
+            s.insertInitialData("loginMode", "Group Select");
         }
         if (androidIDAvailable == false) {
             s = new StatusDBHelper(this);

@@ -4,17 +4,21 @@
     <shared>
       <config>
         <devices>
+          <device id="Nexus 10" />
           <device id="pixel_c" />
         </devices>
       </config>
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ab24c15-082a-415e-9544-107f250a0e10" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/btn_login.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/qrcode_icon.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/login_mode_dialog.xml" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" />
@@ -24,11 +28,10 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/JSInterface.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/JSInterface.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/PlayVideo.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/PlayVideo.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/QRLogin.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/QRLogin.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/VideoPlay.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/VideoPlay.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/CrlDashboard.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/CrlDashboard.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/SignInActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/SignInActivity.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/splashScreenVideo.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/splashScreenVideo.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_crl_dashboard.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_crl_dashboard.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -52,19 +55,15 @@
   <component name="FileEditorManager">
     <leaf />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="layoutResourceFile_vertical" />
+      </list>
+    </option>
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>visi</find>
-      <find>btn_EditUChildList</find>
-      <find>addScore</find>
-      <find>session</find>
-      <find>score</find>
-      <find>playvideo</find>
-      <find>video</find>
-      <find>ondestr</find>
-      <find>pa</find>
-      <find>onpause</find>
-      <find>web</find>
       <find>btn</find>
       <find>intent</find>
       <find>webview</find>
@@ -84,6 +83,17 @@
       <find>playv</find>
       <find>PlayVideo</find>
       <find>cd</find>
+      <find>rg</find>
+      <find>checkini</find>
+      <find>5</find>
+      <find>oncreat</find>
+      <find>QRL</find>
+      <find>rgLoginMode</find>
+      <find>rad</find>
+      <find>resume</find>
+      <find>init</find>
+      <find>login</find>
+      <find>alert</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -2155,10 +2165,8 @@
       <list>
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/splashScreenVideo.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/AssignGroups.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/CrlAddEditScreen.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/SignInActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/MultiPhotoSelectActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/PullData.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/QRLogin.java" />
@@ -2166,6 +2174,11 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/PlayVideo.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/JSInterface.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/VideoPlay.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/login_mode_dialog.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/splashScreenVideo.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_crl_dashboard.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/CrlDashboard.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/SignInActivity.java" />
       </list>
     </option>
   </component>
@@ -2174,6 +2187,9 @@
     <option name="y" value="2" />
     <option name="width" value="1364" />
     <option name="height" value="736" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator currentView="AndroidView" proportions="" version="1">
@@ -2190,8 +2206,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -2214,8 +2228,20 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="ProjectPane" />
+      <pane id="Scratches">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+              <item name="Scratches" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2223,6 +2249,11 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="device.picker.selection" value="LFDET4HESCVGZTFA" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\AndroidWorkspace\PrathamProjects\POSwithQRwithoutGPS\app\src\main\res\drawable" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -2422,7 +2453,14 @@
       <option name="project" value="LOCAL" />
       <updated>1534839068040</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="v2.1.14&#10;August 18&#10;shuffle data --- done&#10;&#10;August 21&#10;Default Pull API HL --- done&#10;Assign Groups else condition to all programid --- done&#10;CrlAddEdit else condition to all programid --- done&#10;MultiPhotoSelect else condition to all programid --- done&#10;Pull Data else condition to all programid --- done&#10;QRLogin else condition to all programid --- done&#10;SignInActivity else condition to all programid --- done&#10;Pull APi based on program id --- done&#10;change dash ui --- done&#10;&#10;&#10;August 24&#10;Session Tracking entry due to playvideo --- (changed to video play) --- done&#10;start webviewservice for on destroy in qr --- done&#10;video play class in jsinterface --- done">
+      <created>1535112385578</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1535112385578</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2435,6 +2473,7 @@
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.67445743" sideWeight="0.5045386" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39788198" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -2444,7 +2483,6 @@
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19288956" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32888147" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32554257" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -2458,8 +2496,8 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45310137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.59563756" sideWeight="0.5030257" order="13" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32554257" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -2469,7 +2507,8 @@
     <MESSAGE value="v2.1.14&#10;August 18&#10;shuffle data --- done" />
     <MESSAGE value="v2.1.14&#10;August 18&#10;shuffle data --- done&#10;&#10;August 21&#10;Default Pull API HL --- done&#10;Assign Groups else condition to all programid --- done&#10;CrlAddEdit else condition to all programid --- done&#10;MultiPhotoSelect else condition to all programid --- done&#10;Pull Data else condition to all programid --- done&#10;QRLogin else condition to all programid --- done&#10;SignInActivity else condition to all programid --- done" />
     <MESSAGE value="v2.1.14&#10;August 18&#10;shuffle data --- done&#10;&#10;August 21&#10;Default Pull API HL --- done&#10;Assign Groups else condition to all programid --- done&#10;CrlAddEdit else condition to all programid --- done&#10;MultiPhotoSelect else condition to all programid --- done&#10;Pull Data else condition to all programid --- done&#10;QRLogin else condition to all programid --- done&#10;SignInActivity else condition to all programid --- done&#10;Pull APi based on program id --- done&#10;change dash ui --- done" />
-    <option name="LAST_COMMIT_MESSAGE" value="v2.1.14&#10;August 18&#10;shuffle data --- done&#10;&#10;August 21&#10;Default Pull API HL --- done&#10;Assign Groups else condition to all programid --- done&#10;CrlAddEdit else condition to all programid --- done&#10;MultiPhotoSelect else condition to all programid --- done&#10;Pull Data else condition to all programid --- done&#10;QRLogin else condition to all programid --- done&#10;SignInActivity else condition to all programid --- done&#10;Pull APi based on program id --- done&#10;change dash ui --- done" />
+    <MESSAGE value="v2.1.14&#10;August 18&#10;shuffle data --- done&#10;&#10;August 21&#10;Default Pull API HL --- done&#10;Assign Groups else condition to all programid --- done&#10;CrlAddEdit else condition to all programid --- done&#10;MultiPhotoSelect else condition to all programid --- done&#10;Pull Data else condition to all programid --- done&#10;QRLogin else condition to all programid --- done&#10;SignInActivity else condition to all programid --- done&#10;Pull APi based on program id --- done&#10;change dash ui --- done&#10;&#10;&#10;August 24&#10;Session Tracking entry due to playvideo --- (changed to video play) --- done&#10;start webviewservice for on destroy in qr --- done&#10;video play class in jsinterface --- done" />
+    <option name="LAST_COMMIT_MESSAGE" value="v2.1.14&#10;August 18&#10;shuffle data --- done&#10;&#10;August 21&#10;Default Pull API HL --- done&#10;Assign Groups else condition to all programid --- done&#10;CrlAddEdit else condition to all programid --- done&#10;MultiPhotoSelect else condition to all programid --- done&#10;Pull Data else condition to all programid --- done&#10;QRLogin else condition to all programid --- done&#10;SignInActivity else condition to all programid --- done&#10;Pull APi based on program id --- done&#10;change dash ui --- done&#10;&#10;&#10;August 24&#10;Session Tracking entry due to playvideo --- (changed to video play) --- done&#10;start webviewservice for on destroy in qr --- done&#10;video play class in jsinterface --- done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2517,32 +2556,25 @@
           <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="12" />
+      <option name="time" value="16" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_crl_add_edit_screen.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/MyApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3087">
           <caret line="56" column="40" lean-forward="true" selection-start-line="56" selection-start-column="40" selection-end-line="56" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/splashScreenVideo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="197" column="34" lean-forward="false" selection-start-line="197" selection-start-column="34" selection-end-line="197" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -2560,27 +2592,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/SignInActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="104" column="16" lean-forward="false" selection-start-line="104" selection-start-column="16" selection-end-line="104" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/PullData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="406">
           <caret line="278" column="0" lean-forward="false" selection-start-line="278" selection-start-column="0" selection-end-line="278" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_crl_dashboard.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="43" column="24" lean-forward="false" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -2599,13 +2614,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_crl_add_edit_screen.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
           <caret line="143" column="0" lean-forward="false" selection-start-line="143" selection-start-column="0" selection-end-line="196" selection-end-column="0" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/ScoreDBHelper.java">
@@ -2718,6 +2733,91 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
           <caret line="403" column="62" lean-forward="false" selection-start-line="403" selection-start-column="53" selection-end-line="403" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/btn_age_5_7.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/qr_icon.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/color.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="32" lean-forward="false" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/scan_qr.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/SelectStudent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/login_mode_dialog.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="44" lean-forward="false" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_crl_dashboard.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="219" column="48" lean-forward="false" selection-start-line="219" selection-start-column="48" selection-end-line="219" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/AddStudentProfiles.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="197" column="25" lean-forward="false" selection-start-line="197" selection-start-column="25" selection-end-line="197" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/splashScreenVideo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="523" column="0" lean-forward="false" selection-start-line="519" selection-start-column="0" selection-end-line="523" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/SignInActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="439" column="29" lean-forward="true" selection-start-line="439" selection-start-column="29" selection-end-line="439" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/CrlDashboard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="497">
+          <caret line="418" column="0" lean-forward="true" selection-start-line="387" selection-start-column="0" selection-end-line="418" selection-end-column="0" />
           <folding />
         </state>
       </provider>
