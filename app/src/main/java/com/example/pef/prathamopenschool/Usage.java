@@ -1,15 +1,33 @@
 package com.example.pef.prathamopenschool;
 
-public class Usage{
+import java.util.List;
+
+public class Usage {
 
     public String grpName;
     public long usageTime;
     public String usageTimeInDays;
+    public List<String> students;
 
-    public Usage(String groupName, long usageTime,String usageTimeInDays) {
+    public Usage(String groupName, long usageTime, String usageTimeInDays) {
         this.grpName = groupName;
         this.usageTime = usageTime;
         this.usageTimeInDays = usageTimeInDays;
+    }
+
+    public Usage(String groupName, long usageTime, String usageTimeInDays, List<String> students) {
+        this.grpName = groupName;
+        this.usageTime = usageTime;
+        this.usageTimeInDays = usageTimeInDays;
+        this.students = students;
+    }
+
+    public List<String> getStudents() {
+        return students;
+    }
+
+    public void setStudents(List<String> students) {
+        this.students = students;
     }
 
     public String getGrpName() {
