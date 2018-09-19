@@ -69,3 +69,94 @@ Change Share/receive name in admin panel --- done
 August 13
 Limit gps entries to 2000 chars --- done
 Default push api is H learning  --- done
+
+v2.1.14
+August 18
+shuffle data --- done
+
+August 21
+Default Pull API HL --- done
+Assign Groups else condition to all programid --- done
+CrlAddEdit else condition to all programid --- done
+MultiPhotoSelect else condition to all programid --- done
+Pull Data else condition to all programid --- done
+QRLogin else condition to all programid --- done
+SignInActivity else condition to all programid --- done
+Pull APi based on program id --- done
+change dash ui --- done
+
+
+August 24
+Session Tracking entry due to playvideo --- (changed to video play) --- done
+start webviewservice for on destroy in qr --- done
+video play class in jsinterface --- done
+
+August 29
+Login Mode dialog in CrlDashboard ( QR/ Group Select) -- done
+Login Mode status in CrlDashboard ( QR/ Group Select) -- done
+change ui of crl dashboard -- done
+initial data splash login mode --- done
+login action according to button clicked in sign in activity --- done
+
+August 30
+pull api for program 8 --- done
+remove pull pi apis from pos --- done
+remove push pi apis from pos --- done
+appName ECE for program id 8 QRLogin --- done
+appName ECE for program id 8 SignInAct -- done
+appName ECE for program id 8 MultiPhoto -- done 
+
+
+Sept 04
+Show App usage in expandable view --- done
+
+Sept 10
+v2.1.15 ---- done
+add Login in score pojo --- done
+New score logic & label column in db --- done
+Score table Label entry in score table --- done
+syncactivity log handle reference -- done
+push new score Label field (pullpushtransferusage, pushdata)---done
+
+Sept 11
+scoredbhelper label field update --- done
+
+Sept12
+push data & equalize pos with & without gps --- done
+alterSession table --- done
+refactor usersession to session pojo --- done
+refactor usesrsession db helper to sessiondbhelper --- done
+new session pojo --- done
+new fields in session db helper --- done
+add startSessionTime at attendance QRLogin --- done
+add startSessionTime at attendance Multiphoto --- done
+add EndSessionTime at attendance PlayVideo --- done
+update endtime after closing session --- done
+
+Sept 14
+update db version to 22 --- done
+create static db version field in DBHelper -- done
+maintain db version in status table splashscreen --- done
+push db version pushdata --- done
+push db version transfer usage --- done
+back button on aks scoreboard (AKSGraph dialog) screen --- done mainactivity line 596
+aks graph xml change add back button --- done
+
+
+sept 15
+update attendance pojo --- done
+update attendance db helper --- done
+update expandable usagedatapump --  done
+
+sept 17
+change signature of usage for sorted std list --- done
+change query attendance db helper getAllSessionsByStdID --- done
+fix session update issue ( end time issue ) --- done
+change db session session id primary key --- done
+test --- done
+show wifiMac on dashboard --- done
+font adjustment in dashboard -- done
+
+automatically take action depending on success & failure push ---
+handle request timeout while pushing --- 
+show indivisual student usage --- 

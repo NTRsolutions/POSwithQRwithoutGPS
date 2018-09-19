@@ -8,6 +8,7 @@ public class Usage {
     public long usageTime;
     public String usageTimeInDays;
     public List<String> students;
+    public List<Usage> usageStudents;
 
     public Usage(String groupName, long usageTime, String usageTimeInDays) {
         this.grpName = groupName;
@@ -20,6 +21,13 @@ public class Usage {
         this.usageTime = usageTime;
         this.usageTimeInDays = usageTimeInDays;
         this.students = students;
+    }
+
+    public Usage(String groupName, String usageTimeInDays,long usageTime, List<Usage> usageStudents) {
+        this.grpName = groupName;
+        this.usageTimeInDays = usageTimeInDays;
+        this.usageTime = usageTime;
+        this.usageStudents = usageStudents;
     }
 
     public List<String> getStudents() {

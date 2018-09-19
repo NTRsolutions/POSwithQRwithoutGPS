@@ -588,6 +588,14 @@ public class MainActivity extends AppCompatActivity implements MediaPlayer.OnCom
                                     TextView tv_name = aksGraphDialog.findViewById(R.id.tv_name);
                                     TextView tv_todayScore = aksGraphDialog.findViewById(R.id.tv_todayscore);
                                     TextView tv_totalScore = aksGraphDialog.findViewById(R.id.tv_totalscore);
+                                    Button btn_back = aksGraphDialog.findViewById(R.id.btn_back);
+
+                                    btn_back.setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View view) {
+                                            aksGraphDialog.dismiss();
+                                        }
+                                    });
 
                                     // todo set AKS Scoreboard
                                     ScoreDBHelper scoreDBHelper = new ScoreDBHelper(MainActivity.this);
@@ -888,7 +896,7 @@ public class MainActivity extends AppCompatActivity implements MediaPlayer.OnCom
                     } else if (card.resourcePath == null || card.resourcePath.equalsIgnoreCase("null")) {
                         cardList.add(card);
                     } else if (card.resourcePath != null && card.resourcePath.contains("KhelPuri") || card.resourceType.contains("video") ||
-                            card.resourcePath.contains("videos") )
+                            card.resourcePath.contains("videos"))
                         cardList.add(card);
                     else
                         cardList.add(card);
@@ -1011,6 +1019,10 @@ public class MainActivity extends AppCompatActivity implements MediaPlayer.OnCom
             super.onBackPressed();
             // close app from main screen
             sessionFlg = true;
+            // check start time available or not
+            SessionDBHelper sessionDBHelper = new SessionDBHelper(MyApplication.getInstance());
+            sessionDBHelper.UpdateEndTime(MultiPhotoSelectActivity.sessionId);
+
             scoreDBHelper = new ScoreDBHelper(sessionContex);
             playVideo.calculateEndTime(scoreDBHelper);
             BackupDatabase.backup(sessionContex);
@@ -1022,6 +1034,8 @@ public class MainActivity extends AppCompatActivity implements MediaPlayer.OnCom
             } catch (Exception e) {
                 e.getMessage();
             }
+
+            MultiPhotoSelectActivity.sessionId = "NA";
 
         } else if (loadFlg) {
             loadFlg = false;
@@ -1072,6 +1086,10 @@ public class MainActivity extends AppCompatActivity implements MediaPlayer.OnCom
                 sessionFlg = true;
 
                 if (!CardAdapter.vidFlg) {
+                    // check start time available or not
+                    SessionDBHelper sessionDBHelper = new SessionDBHelper(MyApplication.getInstance());
+                    sessionDBHelper.UpdateEndTime(MultiPhotoSelectActivity.sessionId);
+
                     scoreDBHelper = new ScoreDBHelper(sessionContex);
                     playVideo.calculateEndTime(scoreDBHelper);
                     BackupDatabase.backup(sessionContex);

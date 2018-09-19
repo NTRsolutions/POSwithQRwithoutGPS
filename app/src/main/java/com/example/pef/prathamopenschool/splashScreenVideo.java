@@ -464,7 +464,9 @@ public class splashScreenVideo extends AppCompatActivity {
         boolean apkType = false;
         boolean prathamCode = false;
         boolean loginMode = false;
+        boolean DBVersion = false;
 
+        DBVersion = s.initialDataAvailable("DBVersion");
         loginMode = s.initialDataAvailable("loginMode");
         prathamCode = s.initialDataAvailable("prathamCode");
         wifiMAC = s.initialDataAvailable("wifiMAC");
@@ -505,6 +507,13 @@ public class splashScreenVideo extends AppCompatActivity {
         } else {
             s = new StatusDBHelper(this);
             s.Update("apkType", "QRCode, NonGPS");
+        }
+        if (DBVersion == false) {
+            s = new StatusDBHelper(this);
+            s.insertInitialData("DBVersion", String.valueOf(DBHelper.DBVersion));
+        } else {
+            s = new StatusDBHelper(this);
+            s.Update("DBVersion", String.valueOf(DBHelper.DBVersion));
         }
         if (wifiMAC == false) {
             WifiManager wifiManager = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);
