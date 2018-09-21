@@ -157,6 +157,28 @@ test --- done
 show wifiMac on dashboard --- done
 font adjustment in dashboard -- done
 
-automatically take action depending on success & failure push ---
-handle request timeout while pushing --- 
-show indivisual student usage --- 
+sept 18
+session fixes in web service & play video -- experiment failed
+reinitialization of session id in signin activity while login --- experiment failed
+check emptyness of sessionid then enter score in play video --- done
+
+sept 19
+false entry session issue from main screen if idle (sign in activity on resume/ oncreate / intent changes, on backpressed main activity NA, webview service NA check, play video NA check -- resolved
+automatically take action depending on success & failure push --- done
+handle request timeout while pushing --- done
+show indivisual student usage --- done
+update UI of child of Expandable list --- done
+
+Sept 21
+push session table while transferusage --- done 
+push sessiontable while push --- done
+push programid transferusage --- done
+new field in statustable programid --- done
+push programid push data --- done
+splash screen programid --- done
+update programid in signin onresume() --- done
+clear session table after pushing push data cleardbrecords() --- done
+clear session table after pushing crltransferusage cleardbrecords() --- done
+sessiondb helper delete all --- done
+clear attendance table after pushing push data cleardbrecords() --- done
+clear attendance table after pushing crltransferusage cleardbrecords() --- done

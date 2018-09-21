@@ -314,6 +314,10 @@ public class SignInActivity extends AppCompatActivity {
             MultiPhotoSelectActivity.pauseFlg = false;
         }
 
+        // Update ProgramID in Status Table
+        StatusDBHelper s = new StatusDBHelper(this);
+        s.Update("ProgramID", MultiPhotoSelectActivity.programID);
+        BackupDatabase.backup(this);
     }
 
 

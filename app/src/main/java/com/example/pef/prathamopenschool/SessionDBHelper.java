@@ -3,6 +3,9 @@ package com.example.pef.prathamopenschool;
 import android.content.Context;
 import android.database.Cursor;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,6 +43,19 @@ public class SessionDBHelper extends DBHelper {
         database.insert(ERRORTABLENAME, null, contentValues);
         database.close();
         BackupDatabase.backup(c);
+    }
+
+
+    public boolean DeleteAll() {
+        try {
+            database = getWritableDatabase();
+            long resultCount = database.delete(TABLENAME, null, null);
+            database.close();
+            return true;
+        } catch (Exception ex) {
+            _PopulateLogValues(ex,"DeleteAll-Session");
+            return false;
+        }
     }
 
 
@@ -155,6 +171,46 @@ public class SessionDBHelper extends DBHelper {
             return "ExceptionOccured";
         }
     }
+
+    public List<Session> GetAll() {
+        try {
+            database = getWritableDatabase();
+            Cursor cursor = database.rawQuery("select * from Session", null);
+
+            return _PopulateListFromCursor(cursor);
+        } catch (Exception ex) {
+            _PopulateLogValues(ex, "GetAll");
+            return null;
+        }
+    }
+
+    private List<Session> _PopulateListFromCursor(Cursor cursor) {
+        try {
+            database = getWritableDatabase();
+            List<Session> aser_list = new ArrayList<Session>();
+            Session sessionObject;
+            cursor.moveToFirst();
+
+            while (cursor.isAfterLast() == false) {
+
+                sessionObject = new Session();
+
+                sessionObject.SessionID = cursor.getString(cursor.getColumnIndex("SessionID"));
+                sessionObject.StartTime = cursor.getString(cursor.getColumnIndex("StartTime"));
+                sessionObject.EndTime = cursor.getString(cursor.getColumnIndex("EndTime"));
+
+                aser_list.add(sessionObject);
+                cursor.moveToNext();
+            }
+            cursor.close();
+            database.close();
+            return aser_list;
+        } catch (Exception ex) {
+            _PopulateLogValues(ex, "populateListFromCursor");
+            return null;
+        }
+    }
+
 
 
 }

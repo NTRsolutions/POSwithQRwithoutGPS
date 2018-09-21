@@ -465,7 +465,9 @@ public class splashScreenVideo extends AppCompatActivity {
         boolean prathamCode = false;
         boolean loginMode = false;
         boolean DBVersion = false;
+        boolean ProgramID = false;
 
+        ProgramID = s.initialDataAvailable("ProgramID");
         DBVersion = s.initialDataAvailable("DBVersion");
         loginMode = s.initialDataAvailable("loginMode");
         prathamCode = s.initialDataAvailable("prathamCode");
@@ -525,6 +527,10 @@ public class splashScreenVideo extends AppCompatActivity {
         if (gpsFixDuration == false) {
             s = new StatusDBHelper(this);
             s.insertInitialData("gpsFixDuration", "");
+        }
+        if (ProgramID == false) {
+            s = new StatusDBHelper(this);
+            s.insertInitialData("ProgramID", "default");
         }
         if (loginMode == false) {
             s = new StatusDBHelper(this);
