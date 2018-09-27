@@ -724,7 +724,7 @@ public class MultiPhotoSelectActivity extends AppCompatActivity {
             setTitle("Pratham Digital - Second Chance");
         else if (MultiPhotoSelectActivity.programID.equals("4"))
             setTitle("Pratham Digital - Pratham Institute");
-        else if (QRLogin.programID.equals("8"))
+        else if (MultiPhotoSelectActivity.programID.equals("8"))
             setTitle("Pratham Digital - ECE");
         else
             setTitle("Pratham Digital");
