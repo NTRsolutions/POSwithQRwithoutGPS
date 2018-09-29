@@ -18,10 +18,10 @@
     <list default="true" id="1ab24c15-082a-415e-9544-107f250a0e10" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/MultiPhotoSelectActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/MultiPhotoSelectActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/SignInActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/SignInActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/splashScreenVideo.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/splashScreenVideo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/POS with QR Code without GPS.txt" beforeDir="false" afterPath="$PROJECT_DIR$/POS with QR Code without GPS.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/AttendanceDBHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/AttendanceDBHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/CrlPullPushTransferUsageScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/CrlPullPushTransferUsageScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/PushData.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/PushData.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -43,54 +43,7 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="splashScreenVideo.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/splashScreenVideo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="67">
-              <caret line="507" column="68" selection-start-line="507" selection-start-column="68" selection-end-line="507" selection-end-column="68" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SignInActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/SignInActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-138">
-              <caret line="100" column="31" selection-start-line="100" selection-start-column="31" selection-end-line="100" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/MainActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="936" column="13" selection-start-line="936" selection-start-column="13" selection-end-line="936" selection-end-column="13" />
-              <folding>
-                <element signature="e#2047#2055#0" expanded="true" />
-                <element signature="e#2109#2117#0" expanded="true" />
-                <element signature="e#37307#37335#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MultiPhotoSelectActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/MultiPhotoSelectActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="849" column="58" selection-start-line="849" selection-start-column="24" selection-end-line="849" selection-end-column="58" />
-              <folding>
-                <element signature="e#22407#22419#0" expanded="true" />
-                <element signature="e#25987#26007#0" expanded="true" />
-                <element signature="e#26173#26213#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -102,9 +55,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>aserdata</find>
-      <find>sessionda</find>
-      <find>ProgramID</find>
       <find>initi</find>
       <find>getprogram</find>
       <find>clear</find>
@@ -132,6 +82,9 @@
       <find>MultiPhotoSelectActivity.programID</find>
       <find>program</find>
       <find>shuff</find>
+      <find>attendanc</find>
+      <find>attendanceda</find>
+      <find>atte</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -2425,17 +2378,17 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/list_item_usage.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/Attendance.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/SessionDBHelper.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/PushData.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/CrlPullPushTransferUsageScreen.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/ScoreDBHelper.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/ExpandableUsageListDataPump.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/AttendanceDBHelper.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_add_student_profiles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/MultiPhotoSelectActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/SignInActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/splashScreenVideo.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/AttendanceDBHelper.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/CrlPullPushTransferUsageScreen.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/PushData.java" />
       </list>
     </option>
   </component>
@@ -2454,29 +2407,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView">
-        <subPane>
-          <expand>
-            <path>
-              <item name="POSwithQRwithoutGPS" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-            </path>
-            <path>
-              <item name="POSwithQRwithoutGPS" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-            </path>
-            <path>
-              <item name="POSwithQRwithoutGPS" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="prathamopenschool" type="cbb59c9e:AndroidPsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <expand>
@@ -2523,7 +2454,29 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="POSwithQRwithoutGPS" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="POSwithQRwithoutGPS" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="POSwithQRwithoutGPS" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="prathamopenschool" type="cbb59c9e:AndroidPsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2780,13 +2733,20 @@
       <option name="project" value="LOCAL" />
       <updated>1537949027240</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Sept 21&#10;push session table while transferusage --- done &#10;push sessiontable while push --- done&#10;push programid transferusage --- done&#10;new field in statustable programid --- done&#10;push programid push data --- done&#10;splash screen programid --- done&#10;update programid in signin onresume() --- done&#10;clear session table after pushing push data cleardbrecords() --- done&#10;clear session table after pushing crltransferusage cleardbrecords() --- done&#10;sessiondb helper delete all --- done&#10;clear attendance table after pushing push data cleardbrecords() --- done&#10;clear attendance table after pushing crltransferusage cleardbrecords() --- done&#10;revisit expandable list logic --- done&#10;dependancy vector --- done&#10;get session id by grp id --- done&#10;&#10;&#10;Sept 24&#10;age char limit in forms --- done&#10;&#10;Sept 26&#10;shuffle non shuffle apk media content MainActivity -- done&#10;&#10;Sept 27&#10;apk crashing for program id 8 --- resolved&#10;&#10;delete student when pull data ---">
+      <created>1538048733181</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1538048733181</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <layout>
-      <window_info anchor="bottom" id="Android Profiler" order="7" weight="0.32888147" />
+      <window_info anchor="bottom" id="Android Profiler" order="7" show_stripe_button="false" weight="0.32888147" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="6" />
@@ -2870,7 +2830,8 @@
     <MESSAGE value="Sept 21&#10;push session table while transferusage --- done &#10;push sessiontable while push --- done&#10;push programid transferusage --- done&#10;new field in statustable programid --- done&#10;push programid push data --- done&#10;splash screen programid --- done&#10;update programid in signin onresume() --- done&#10;clear session table after pushing push data cleardbrecords() --- done&#10;clear session table after pushing crltransferusage cleardbrecords() --- done&#10;sessiondb helper delete all --- done&#10;clear attendance table after pushing push data cleardbrecords() --- done&#10;clear attendance table after pushing crltransferusage cleardbrecords() --- done" />
     <MESSAGE value="Sept 21&#10;push session table while transferusage --- done &#10;push sessiontable while push --- done&#10;push programid transferusage --- done&#10;new field in statustable programid --- done&#10;push programid push data --- done&#10;splash screen programid --- done&#10;update programid in signin onresume() --- done&#10;clear session table after pushing push data cleardbrecords() --- done&#10;clear session table after pushing crltransferusage cleardbrecords() --- done&#10;sessiondb helper delete all --- done&#10;clear attendance table after pushing push data cleardbrecords() --- done&#10;clear attendance table after pushing crltransferusage cleardbrecords() --- done&#10;revisit expandable list logic --- done&#10;dependancy vector --- done&#10;get session id by grp id --- done" />
     <MESSAGE value="Sept 21&#10;push session table while transferusage --- done &#10;push sessiontable while push --- done&#10;push programid transferusage --- done&#10;new field in statustable programid --- done&#10;push programid push data --- done&#10;splash screen programid --- done&#10;update programid in signin onresume() --- done&#10;clear session table after pushing push data cleardbrecords() --- done&#10;clear session table after pushing crltransferusage cleardbrecords() --- done&#10;sessiondb helper delete all --- done&#10;clear attendance table after pushing push data cleardbrecords() --- done&#10;clear attendance table after pushing crltransferusage cleardbrecords() --- done&#10;revisit expandable list logic --- done&#10;dependancy vector --- done&#10;get session id by grp id --- done&#10;&#10;&#10;Sept 24&#10;age char limit in forms --- done&#10;&#10;Sept 26&#10;shuffle non shuffle apk media content MainActivity -- done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sept 21&#10;push session table while transferusage --- done &#10;push sessiontable while push --- done&#10;push programid transferusage --- done&#10;new field in statustable programid --- done&#10;push programid push data --- done&#10;splash screen programid --- done&#10;update programid in signin onresume() --- done&#10;clear session table after pushing push data cleardbrecords() --- done&#10;clear session table after pushing crltransferusage cleardbrecords() --- done&#10;sessiondb helper delete all --- done&#10;clear attendance table after pushing push data cleardbrecords() --- done&#10;clear attendance table after pushing crltransferusage cleardbrecords() --- done&#10;revisit expandable list logic --- done&#10;dependancy vector --- done&#10;get session id by grp id --- done&#10;&#10;&#10;Sept 24&#10;age char limit in forms --- done&#10;&#10;Sept 26&#10;shuffle non shuffle apk media content MainActivity -- done" />
+    <MESSAGE value="Sept 21&#10;push session table while transferusage --- done &#10;push sessiontable while push --- done&#10;push programid transferusage --- done&#10;new field in statustable programid --- done&#10;push programid push data --- done&#10;splash screen programid --- done&#10;update programid in signin onresume() --- done&#10;clear session table after pushing push data cleardbrecords() --- done&#10;clear session table after pushing crltransferusage cleardbrecords() --- done&#10;sessiondb helper delete all --- done&#10;clear attendance table after pushing push data cleardbrecords() --- done&#10;clear attendance table after pushing crltransferusage cleardbrecords() --- done&#10;revisit expandable list logic --- done&#10;dependancy vector --- done&#10;get session id by grp id --- done&#10;&#10;&#10;Sept 24&#10;age char limit in forms --- done&#10;&#10;Sept 26&#10;shuffle non shuffle apk media content MainActivity -- done&#10;&#10;Sept 27&#10;apk crashing for program id 8 --- resolved&#10;&#10;delete student when pull data ---" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sept 21&#10;push session table while transferusage --- done &#10;push sessiontable while push --- done&#10;push programid transferusage --- done&#10;new field in statustable programid --- done&#10;push programid push data --- done&#10;splash screen programid --- done&#10;update programid in signin onresume() --- done&#10;clear session table after pushing push data cleardbrecords() --- done&#10;clear session table after pushing crltransferusage cleardbrecords() --- done&#10;sessiondb helper delete all --- done&#10;clear attendance table after pushing push data cleardbrecords() --- done&#10;clear attendance table after pushing crltransferusage cleardbrecords() --- done&#10;revisit expandable list logic --- done&#10;dependancy vector --- done&#10;get session id by grp id --- done&#10;&#10;&#10;Sept 24&#10;age char limit in forms --- done&#10;&#10;Sept 26&#10;shuffle non shuffle apk media content MainActivity -- done&#10;&#10;Sept 27&#10;apk crashing for program id 8 --- resolved&#10;&#10;delete student when pull data ---" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3059,13 +3020,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="372">
           <caret line="343" column="17" selection-start-line="343" selection-start-column="17" selection-end-line="343" selection-end-column="17" />
         </state>
-      </provider>
-      <provider editor-type-id="android-manifest">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/Attendance.java">
@@ -3144,20 +3105,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/CrlPullPushTransferUsageScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="670" column="65" lean-forward="true" selection-start-line="670" selection-start-column="65" selection-end-line="670" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/PushData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="826" selection-start-line="826" selection-end-line="826" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_add_new_crl.xml">
       <provider selected="true" editor-type-id="android-designer2">
         <state />
@@ -3186,13 +3133,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="233">
           <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/AttendanceDBHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="110" lean-forward="true" selection-start-line="90" selection-end-line="110" />
         </state>
       </provider>
     </entry>
@@ -3262,15 +3202,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/MultiPhotoSelectActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/splashScreenVideo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="849" column="58" selection-start-line="849" selection-start-column="24" selection-end-line="849" selection-end-column="58" />
-          <folding>
-            <element signature="e#22407#22419#0" expanded="true" />
-            <element signature="e#25987#26007#0" expanded="true" />
-            <element signature="e#26173#26213#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="105">
+          <caret line="525" column="9" selection-start-line="525" selection-start-column="9" selection-end-line="525" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/SignInActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="100" column="31" selection-start-line="100" selection-start-column="31" selection-end-line="100" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -3278,25 +3220,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="236">
           <caret line="936" column="13" selection-start-line="936" selection-start-column="13" selection-end-line="936" selection-end-column="13" />
-          <folding>
-            <element signature="e#2047#2055#0" expanded="true" />
-            <element signature="e#2109#2117#0" expanded="true" />
-            <element signature="e#37307#37335#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/SignInActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/MultiPhotoSelectActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-138">
-          <caret line="100" column="31" selection-start-line="100" selection-start-column="31" selection-end-line="100" selection-end-column="31" />
+        <state relative-caret-position="202">
+          <caret line="849" column="58" selection-start-line="849" selection-start-column="24" selection-end-line="849" selection-end-column="58" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/splashScreenVideo.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/AttendanceDBHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="507" column="68" selection-start-line="507" selection-start-column="68" selection-end-line="507" selection-end-column="68" />
+        <state relative-caret-position="2520">
+          <caret line="180" column="13" lean-forward="true" selection-start-line="180" selection-start-column="13" selection-end-line="180" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/CrlPullPushTransferUsageScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="656" column="58" selection-start-line="656" selection-start-column="58" selection-end-line="656" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/PushData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="610" column="68" selection-start-line="610" selection-start-column="68" selection-end-line="610" selection-end-column="68" />
         </state>
       </provider>
     </entry>
