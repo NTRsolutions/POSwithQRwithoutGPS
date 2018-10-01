@@ -17,11 +17,13 @@
   <component name="ChangeListManager">
     <list default="true" id="1ab24c15-082a-415e-9544-107f250a0e10" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/POS with QR Code without GPS.txt" beforeDir="false" afterPath="$PROJECT_DIR$/POS with QR Code without GPS.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/AttendanceDBHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/AttendanceDBHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/CrlPullPushTransferUsageScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/CrlPullPushTransferUsageScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/PushData.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/PushData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/AssignGroups.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/AssignGroups.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/StudentDBHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/StudentDBHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/splashScreenVideo.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/splashScreenVideo.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -43,7 +45,7 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -55,25 +57,16 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>initi</find>
-      <find>getprogram</find>
-      <find>clear</find>
-      <find>cleard</find>
-      <find>displa</find>
-      <find>disp</find>
-      <find>display</find>
       <find>cleardb</find>
       <find>aser</find>
       <find>cleardbre</find>
       <find>metaa</find>
-      <find>delete</find>
       <find>geta</find>
       <find>onres</find>
       <find>appusa</find>
       <find>carda</find>
       <find>nodelis</find>
       <find>nodelist</find>
-      <find>student</find>
       <find>checkini</find>
       <find>random</find>
       <find>shuffle</find>
@@ -81,10 +74,19 @@
       <find>programid</find>
       <find>MultiPhotoSelectActivity.programID</find>
       <find>program</find>
-      <find>shuff</find>
       <find>attendanc</find>
       <find>attendanceda</find>
       <find>atte</find>
+      <find>save</find>
+      <find>boolea</find>
+      <find>delete</find>
+      <find>replace</find>
+      <find>device</find>
+      <find>student</find>
+      <find>assign</find>
+      <find>2.1.15</find>
+      <find>shuff</find>
+      <find>ins</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -2345,7 +2347,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/AssignGroups.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/CrlAddEditScreen.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/VideoPlay.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/login_mode_dialog.xml" />
@@ -2380,15 +2381,17 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/SessionDBHelper.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/ScoreDBHelper.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/ExpandableUsageListDataPump.java" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_add_student_profiles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/MultiPhotoSelectActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/SignInActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/splashScreenVideo.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/AttendanceDBHelper.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/CrlPullPushTransferUsageScreen.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/PushData.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/StudentDBHelper.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/AssignGroups.java" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/splashScreenVideo.java" />
       </list>
     </option>
   </component>
@@ -2407,7 +2410,33 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="POSwithQRwithoutGPS" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="POSwithQRwithoutGPS" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="POSwithQRwithoutGPS" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="prathamopenschool" type="cbb59c9e:AndroidPsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="POSwithQRwithoutGPS" type="1abcf292:AndroidViewProjectNode" />
+              <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <expand>
@@ -2454,35 +2483,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView">
-        <subPane>
-          <expand>
-            <path>
-              <item name="POSwithQRwithoutGPS" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-            </path>
-            <path>
-              <item name="POSwithQRwithoutGPS" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-            </path>
-            <path>
-              <item name="POSwithQRwithoutGPS" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="prathamopenschool" type="cbb59c9e:AndroidPsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="android.profiler.active" value="true" />
     <property name="android.sdk.path" value="C:/AndroidSDK" />
-    <property name="device.picker.selection" value="M7Y98SFINNMJ6TRO" />
+    <property name="device.picker.selection" value="LFDET4HESCVGZTFA" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
@@ -2740,23 +2747,30 @@
       <option name="project" value="LOCAL" />
       <updated>1538048733181</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Sept 29&#10;improvise attendance table crlpullpushtransfer --- done&#10;improvise attendance table pushdata --- done&#10;add new method to attendance db -- done&#10;delete student when pull data --- awaiting for ganesh sir's api change">
+      <created>1538200266776</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1538200266776</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <layout>
-      <window_info anchor="bottom" id="Android Profiler" order="7" show_stripe_button="false" weight="0.32888147" />
+      <window_info anchor="bottom" id="Android Profiler" order="7" weight="0.32888147" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="6" />
       <window_info id="Build Variants" order="2" sideWeight="0.51086956" side_tool="true" weight="0.22919819" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.515885" side_tool="true" weight="0.38564274" />
-      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.32888147" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="12" weight="0.327212" />
-      <window_info anchor="bottom" id="Logcat" order="9" sideWeight="0.4924357" weight="0.7228714" />
+      <window_info anchor="bottom" id="Logcat" order="9" sideWeight="0.4924357" weight="0.721202" />
       <window_info id="Captures" order="3" weight="0.25" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="Designer" order="5" />
@@ -2766,17 +2780,17 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.24962178" />
       <window_info anchor="right" id="Device File Explorer" order="8" side_tool="true" weight="0.32980332" />
       <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.48411497" weight="0.38564274" />
       <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.48411497" weight="0.38564274" />
       <window_info anchor="right" id="Assistant" order="9" weight="0.32980332" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32885906" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Preview" order="7" weight="0.30484116" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Gradle Console" order="13" sideWeight="0.5030257" side_tool="true" weight="0.59563756" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32554257" />
     </layout>
@@ -2831,7 +2845,8 @@
     <MESSAGE value="Sept 21&#10;push session table while transferusage --- done &#10;push sessiontable while push --- done&#10;push programid transferusage --- done&#10;new field in statustable programid --- done&#10;push programid push data --- done&#10;splash screen programid --- done&#10;update programid in signin onresume() --- done&#10;clear session table after pushing push data cleardbrecords() --- done&#10;clear session table after pushing crltransferusage cleardbrecords() --- done&#10;sessiondb helper delete all --- done&#10;clear attendance table after pushing push data cleardbrecords() --- done&#10;clear attendance table after pushing crltransferusage cleardbrecords() --- done&#10;revisit expandable list logic --- done&#10;dependancy vector --- done&#10;get session id by grp id --- done" />
     <MESSAGE value="Sept 21&#10;push session table while transferusage --- done &#10;push sessiontable while push --- done&#10;push programid transferusage --- done&#10;new field in statustable programid --- done&#10;push programid push data --- done&#10;splash screen programid --- done&#10;update programid in signin onresume() --- done&#10;clear session table after pushing push data cleardbrecords() --- done&#10;clear session table after pushing crltransferusage cleardbrecords() --- done&#10;sessiondb helper delete all --- done&#10;clear attendance table after pushing push data cleardbrecords() --- done&#10;clear attendance table after pushing crltransferusage cleardbrecords() --- done&#10;revisit expandable list logic --- done&#10;dependancy vector --- done&#10;get session id by grp id --- done&#10;&#10;&#10;Sept 24&#10;age char limit in forms --- done&#10;&#10;Sept 26&#10;shuffle non shuffle apk media content MainActivity -- done" />
     <MESSAGE value="Sept 21&#10;push session table while transferusage --- done &#10;push sessiontable while push --- done&#10;push programid transferusage --- done&#10;new field in statustable programid --- done&#10;push programid push data --- done&#10;splash screen programid --- done&#10;update programid in signin onresume() --- done&#10;clear session table after pushing push data cleardbrecords() --- done&#10;clear session table after pushing crltransferusage cleardbrecords() --- done&#10;sessiondb helper delete all --- done&#10;clear attendance table after pushing push data cleardbrecords() --- done&#10;clear attendance table after pushing crltransferusage cleardbrecords() --- done&#10;revisit expandable list logic --- done&#10;dependancy vector --- done&#10;get session id by grp id --- done&#10;&#10;&#10;Sept 24&#10;age char limit in forms --- done&#10;&#10;Sept 26&#10;shuffle non shuffle apk media content MainActivity -- done&#10;&#10;Sept 27&#10;apk crashing for program id 8 --- resolved&#10;&#10;delete student when pull data ---" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sept 21&#10;push session table while transferusage --- done &#10;push sessiontable while push --- done&#10;push programid transferusage --- done&#10;new field in statustable programid --- done&#10;push programid push data --- done&#10;splash screen programid --- done&#10;update programid in signin onresume() --- done&#10;clear session table after pushing push data cleardbrecords() --- done&#10;clear session table after pushing crltransferusage cleardbrecords() --- done&#10;sessiondb helper delete all --- done&#10;clear attendance table after pushing push data cleardbrecords() --- done&#10;clear attendance table after pushing crltransferusage cleardbrecords() --- done&#10;revisit expandable list logic --- done&#10;dependancy vector --- done&#10;get session id by grp id --- done&#10;&#10;&#10;Sept 24&#10;age char limit in forms --- done&#10;&#10;Sept 26&#10;shuffle non shuffle apk media content MainActivity -- done&#10;&#10;Sept 27&#10;apk crashing for program id 8 --- resolved&#10;&#10;delete student when pull data ---" />
+    <MESSAGE value="Sept 29&#10;improvise attendance table crlpullpushtransfer --- done&#10;improvise attendance table pushdata --- done&#10;add new method to attendance db -- done&#10;delete student when pull data --- awaiting for ganesh sir's api change" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sept 29&#10;improvise attendance table crlpullpushtransfer --- done&#10;improvise attendance table pushdata --- done&#10;add new method to attendance db -- done&#10;delete student when pull data --- awaiting for ganesh sir's api change" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2864,17 +2879,10 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="131" />
+      <option name="time" value="144" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/Utility.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="57" column="49" selection-start-line="57" selection-start-column="49" selection-end-line="57" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/CrlDBHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
@@ -2922,13 +2930,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/StudentDBHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="116" column="31" lean-forward="true" selection-start-line="116" selection-start-column="31" selection-end-line="116" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -3143,13 +3144,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-119">
-          <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_add_student_profiles.xml">
       <provider editor-type-id="android-designer2">
         <state />
@@ -3167,24 +3161,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/DatabaseInitialization.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="58" selection-start-line="58" selection-end-line="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/StatusDBHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
           <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/PullData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="277" column="106" selection-start-line="277" selection-start-column="105" selection-end-line="277" selection-end-column="106" />
         </state>
       </provider>
     </entry>
@@ -3202,24 +3182,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/splashScreenVideo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="525" column="9" selection-start-line="525" selection-start-column="9" selection-end-line="525" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/SignInActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="100" column="31" selection-start-line="100" selection-start-column="31" selection-end-line="100" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="936" column="13" selection-start-line="936" selection-start-column="13" selection-end-line="936" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -3248,6 +3214,55 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="610" column="68" selection-start-line="610" selection-start-column="68" selection-end-line="610" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/DatabaseInitialization.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="57" column="225" selection-start-line="57" selection-start-column="216" selection-end-line="57" selection-end-column="225" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/PullData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-167">
+          <caret line="385" column="17" selection-start-line="385" selection-start-column="17" selection-end-line="385" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="934" column="33" selection-start-line="934" selection-start-column="33" selection-end-line="934" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/splashScreenVideo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="508" column="16" selection-start-line="508" selection-start-column="16" selection-end-line="508" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/AssignGroups.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="539" lean-forward="true" selection-start-line="539" selection-end-line="539" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/StudentDBHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="64" lean-forward="true" selection-start-line="53" selection-start-column="2" selection-end-line="64" />
         </state>
       </provider>
     </entry>

@@ -213,14 +213,18 @@ public class AssignGroups extends AppCompatActivity {
                                         e.printStackTrace();
                                     }
 
-// EROR FOR JAY KISAN
                                     for (int i = 0; i < stdList.size(); i++) {
                                         Student sobj = stdList.get(i);
                                         stdDB.replaceData(sobj);
                                     }
 
-                                    StatusDBHelper statusDBHelper = new StatusDBHelper(context);
 
+                                    // Delete Records of Deleted Students
+                                    stdDB = new StudentDBHelper(AssignGroups.this);
+                                    boolean result = stdDB.deleteDeletedStdRecords();
+
+
+                                    StatusDBHelper statusDBHelper = new StatusDBHelper(context);
 
                                     statusDBHelper.Update("group1", (group1));
                                     statusDBHelper.Update("group2", (group2));
@@ -508,6 +512,7 @@ public class AssignGroups extends AppCompatActivity {
                 Student stdObj = new Student();
 
                 stdObj.StudentID = stdJsonObject.getString("StudentId");
+                stdObj.StudentUID = stdJsonObject.getString("StudentUID");
                 stdObj.FirstName = stdJsonObject.getString("FirstName");
                 stdObj.LastName = stdJsonObject.getString("LastName");
                 String ageCheck = stdJsonObject.getString("Age");
@@ -524,7 +529,15 @@ public class AssignGroups extends AppCompatActivity {
                     stdObj.Class = 0;
                 }
 
-                stdObj.UpdatedDate = stdJsonObject.getString("UpdatedDate");
+
+                stdObj.CreatedBy = stdJsonObject.getString("CreatedBy");
+
+                String updateDate = stdJsonObject.getString("UpdatedDate");
+                if (updateDate == null || updateDate.equalsIgnoreCase("null"))
+                    stdObj.UpdatedDate = "";
+                else
+                    stdObj.UpdatedDate = updateDate;
+
 
                 String gen = stdJsonObject.getString("Gender");
                 if (gen.equals("Male") || gen.equals("M") || gen.equals("1")) {
