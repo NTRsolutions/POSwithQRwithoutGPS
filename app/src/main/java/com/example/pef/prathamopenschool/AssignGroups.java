@@ -183,27 +183,27 @@ public class AssignGroups extends AppCompatActivity {
                                     if (!checkGroupInDB(group1) && !group1.equals("")) {
                                         Group obj = getGroupInfo(group1);
                                         //   obj.GroupCode = "";
-                                        gdb.insertData(obj);   // Debugging till here
+                                        gdb.replaceData(obj);   // Debugging till here
                                     }
                                     if (!checkGroupInDB(group2) && !group2.equals("")) {
                                         Group obj = getGroupInfo(group2);
                                         //   obj.GroupCode = "";
-                                        gdb.insertData(obj);
+                                        gdb.replaceData(obj);
                                     }
                                     if (!checkGroupInDB(group3) && !group3.equals("")) {
                                         Group obj = getGroupInfo(group3);
                                         obj.GroupCode = "";
-                                        gdb.insertData(obj);
+                                        gdb.replaceData(obj);
                                     }
                                     if (!checkGroupInDB(group4) && !group4.equals("")) {
                                         Group obj = getGroupInfo(group4);
                                         //   obj.GroupCode = "";
-                                        gdb.insertData(obj);
+                                        gdb.replaceData(obj);
                                     }
                                     if (!checkGroupInDB(group5) && !group5.equals("")) {
                                         Group obj = getGroupInfo(group5);
                                         //      obj.GroupCode = "";
-                                        gdb.insertData(obj);
+                                        gdb.replaceData(obj);
                                     }
 
                                     List<Student> stdList = null;
@@ -241,6 +241,12 @@ public class AssignGroups extends AppCompatActivity {
                                     statusDBHelper.Update("ActivatedDate", new Utility().GetCurrentDateTime(false));
                                     statusDBHelper.Update("ActivatedForGroups", group1 + "," + group2 + "," + group3 + "," + group4 + "," + group5);
                                     BackupDatabase.backup(AssignGroups.this);
+
+                                    // Update Group Table
+                                    updateGroupTable();
+                                    // Delete Groups where Device ID is deleted & also delete associated students & update status table
+                                    deleteGroups();
+
                                     /*StatusDBHelper statusDBHelper2 = new StatusDBHelper(context);
                                     boolean res = statusDBHelper2.updateTrailerCount(0, group1);
                                     res = statusDBHelper2.updateTrailerCount(0, group2);*/
@@ -276,6 +282,172 @@ public class AssignGroups extends AppCompatActivity {
 
 
     }//onCreate
+
+    private void deleteGroups() {
+        // Delete Records of Deleted Students
+        gdb = new GroupDBHelper(AssignGroups.this);
+        List<Group> deletedGroupsList = gdb.GetAllDeletedGroups();
+
+        // Delete students for all deleted groups
+        for (int i = 0; i < deletedGroupsList.size(); i++) {
+            StudentDBHelper studentDBHelper = new StudentDBHelper(this);
+            boolean res = studentDBHelper.deleteDeletedGrpsStdRecords(deletedGroupsList.get(i).GroupID);
+        }
+
+        // update Status Table (reset groupid to 0 & activated groups replace
+        for (int i = 0; i < deletedGroupsList.size(); i++) {
+            StatusDBHelper statusDBHelper = new StatusDBHelper(AssignGroups.this);
+            String grp1 = statusDBHelper.getValue("group1");
+            String grp2 = statusDBHelper.getValue("group2");
+            String grp3 = statusDBHelper.getValue("group3");
+            String grp4 = statusDBHelper.getValue("group4");
+            String grp5 = statusDBHelper.getValue("group5");
+            if (deletedGroupsList.get(i).GroupID.equalsIgnoreCase(grp1)) {
+                statusDBHelper.Update("group1", "0");
+                String act = statusDBHelper.getValue("ActivatedForGroups");
+                act = act.replace(grp1, "0");
+                statusDBHelper.Update("ActivatedForGroups", act);
+            }
+            if (deletedGroupsList.get(i).GroupID.equalsIgnoreCase(grp2)) {
+                statusDBHelper.Update("group2", "0");
+                String act = statusDBHelper.getValue("ActivatedForGroups");
+                act = act.replace(grp2, "0");
+                statusDBHelper.Update("ActivatedForGroups", act);
+            }
+            if (deletedGroupsList.get(i).GroupID.equalsIgnoreCase(grp3)) {
+                statusDBHelper.Update("group3", "0");
+                String act = statusDBHelper.getValue("ActivatedForGroups");
+                act = act.replace(grp3, "0");
+                statusDBHelper.Update("ActivatedForGroups", act);
+            }
+            if (deletedGroupsList.get(i).GroupID.equalsIgnoreCase(grp4)) {
+                statusDBHelper.Update("group4", "0");
+                String act = statusDBHelper.getValue("ActivatedForGroups");
+                act = act.replace(grp4, "0");
+                statusDBHelper.Update("ActivatedForGroups", act);
+            }
+            if (deletedGroupsList.get(i).GroupID.equalsIgnoreCase(grp5)) {
+                statusDBHelper.Update("group5", "0");
+                String act = statusDBHelper.getValue("ActivatedForGroups");
+                act = act.replace(grp5, "0");
+                statusDBHelper.Update("ActivatedForGroups", act);
+            }
+        }
+
+        // delete groups
+        boolean result = gdb.deleteDeletedGrpRecords();
+    }
+
+    // Delete Records of Deleted Groups
+    private void updateGroupTable() {
+
+        // Group 1
+        try {
+            List<Group> grpList = null;
+            try {
+                int vilID = gdb.getVillageIDByGroupID(group1);
+                grpList = PopulateGroupsFromJson(vilID);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+            // insert group 1 data
+            for (int i = 0; i < grpList.size(); i++) {
+                if (grpList.get(i).GroupID.equalsIgnoreCase(group1)) {
+                    Group gobj = grpList.get(i);
+                    gdb.replaceData(gobj);
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        // Group 2
+        try {
+            List<Group> grpList = null;
+            try {
+                int vilID = gdb.getVillageIDByGroupID(group2);
+                grpList = PopulateGroupsFromJson(vilID);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+            // insert group 2 data
+            for (int i = 0; i < grpList.size(); i++) {
+                if (grpList.get(i).GroupID.equalsIgnoreCase(group2)) {
+                    Group gobj = grpList.get(i);
+                    gdb.replaceData(gobj);
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        // Group 3
+        try {
+            List<Group> grpList = null;
+            try {
+                int vilID = gdb.getVillageIDByGroupID(group3);
+                grpList = PopulateGroupsFromJson(vilID);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+            // insert group 3 data
+            for (int i = 0; i < grpList.size(); i++) {
+                if (grpList.get(i).GroupID.equalsIgnoreCase(group3)) {
+                    Group gobj = grpList.get(i);
+                    gdb.replaceData(gobj);
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        // Group 4
+        try {
+            List<Group> grpList = null;
+            try {
+                int vilID = gdb.getVillageIDByGroupID(group4);
+                grpList = PopulateGroupsFromJson(vilID);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+            // insert group 4 data
+            for (int i = 0; i < grpList.size(); i++) {
+                if (grpList.get(i).GroupID.equalsIgnoreCase(group4)) {
+                    Group gobj = grpList.get(i);
+                    gdb.replaceData(gobj);
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        // Group 5
+        try {
+            List<Group> grpList = null;
+            try {
+                int vilID = gdb.getVillageIDByGroupID(group5);
+                grpList = PopulateGroupsFromJson(vilID);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+            // insert group 5 data
+            for (int i = 0; i < grpList.size(); i++) {
+                if (grpList.get(i).GroupID.equalsIgnoreCase(group5)) {
+                    Group gobj = grpList.get(i);
+                    gdb.replaceData(gobj);
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+    }
 
 
     public boolean checkGroupInDB(String grpID) {
@@ -544,9 +716,11 @@ public class AssignGroups extends AppCompatActivity {
                     stdObj.Gender = "Male";
                 } else if (gen.equals("Female") || gen.equals("F") || gen.equals("2")) {
                     stdObj.Gender = "Female";
+                } else if (gen.trim().equalsIgnoreCase("")) {
+                    stdObj.Gender = "Male";
                 } else {
                     // Default
-                    stdObj.Gender = "Male";
+                    stdObj.Gender = stdJsonObject.getString("Gender");
                 }
 
                 stdObj.GroupID = stdJsonObject.getString("GroupId");
@@ -615,6 +789,11 @@ public class AssignGroups extends AppCompatActivity {
                 grpobj.GroupName = grpJsonObject.getString("GroupName");
                 grpobj.VillageID = grpJsonObject.getInt("VillageId");
                 grpobj.ProgramID = grpJsonObject.getInt("ProgramId");
+
+                grpobj.GroupCode = grpJsonObject.getString("GroupCode");
+                grpobj.SchoolName = grpJsonObject.getString("SchoolName");
+                grpobj.VillageName = grpJsonObject.getString("VIllageName");
+                grpobj.DeviceID = grpJsonObject.getString("DeviceId");
 
                 jsonGrpList.add(grpobj);
 
