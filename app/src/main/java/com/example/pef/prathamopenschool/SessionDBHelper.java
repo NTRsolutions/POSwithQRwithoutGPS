@@ -3,9 +3,6 @@ package com.example.pef.prathamopenschool;
 import android.content.Context;
 import android.database.Cursor;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -53,9 +50,18 @@ public class SessionDBHelper extends DBHelper {
             database.close();
             return true;
         } catch (Exception ex) {
-            _PopulateLogValues(ex,"DeleteAll-Session");
+            _PopulateLogValues(ex, "DeleteAll-Session");
             return false;
         }
+    }
+
+    // replace null values with dummy
+    public void replaceNulls() {
+        database = getWritableDatabase();
+        cursor = database.rawQuery("UPDATE Session SET SessionID = IfNull(SessionID,''), StartTime = IfNull(StartTime,''), EndTime = IfNull(EndTime,'')", null);
+        cursor.moveToFirst();
+        cursor.close();
+        database.close();
     }
 
 
@@ -210,7 +216,6 @@ public class SessionDBHelper extends DBHelper {
             return null;
         }
     }
-
 
 
 }
