@@ -32,6 +32,7 @@ public class WebViewActivity extends AppCompatActivity implements WebViewInterfa
     PlayVideo playVideo;
     boolean timer;
     String gamePath;
+    String resType;
     static ArrayList<String> resWebIdArray = new ArrayList<String>();
     static ArrayList<String> resWebPathArray = new ArrayList<String>();
 
@@ -43,16 +44,19 @@ public class WebViewActivity extends AppCompatActivity implements WebViewInterfa
 
         webView = (WebView) findViewById(R.id.loadPage);
 
-
         MainActivity.sessionFlg = false;
         sessionContex = this;
         playVideo = new PlayVideo();
 
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-
         gamePath = getIntent().getStringExtra("path");
         webResId = getIntent().getStringExtra("resId");
         resName = getIntent().getStringExtra("resName");
+        resType = getIntent().getStringExtra("resType");
+
+        if (resType.equalsIgnoreCase("url"))
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        else
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
         createWebView(Uri.parse(gamePath));
 
