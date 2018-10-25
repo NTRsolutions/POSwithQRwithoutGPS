@@ -20,6 +20,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -67,12 +68,19 @@ public class SignInActivity extends AppCompatActivity {
     private String loginMode;
 //    public static String sessionStartTime;
 
+    ImageButton btn_Regular_5to7, btn_Regular_8to14, btn_Regular_14to18;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
         EventBus.getDefault().register(SignInActivity.this);
+
+        btn_Regular_5to7 = findViewById(R.id.btn_Regular_5to7);
+        btn_Regular_8to14 = findViewById(R.id.btn_Regular_8to14);
+        btn_Regular_14to18 = findViewById(R.id.btn_Regular_14to18);
+
         // Multiphotoselect initialization
         MultiPhotoSelectActivity.dilog = new DilogBoxForProcess();
         MultiPhotoSelectActivity.programID = new Utility().getProgramId();
@@ -101,7 +109,7 @@ public class SignInActivity extends AppCompatActivity {
                 s.insertInitialData("appName", "Pratham Digital - Read India");
             else if (MultiPhotoSelectActivity.programID.equals("3"))
                 s.insertInitialData("appName", "Pratham Digital - Second Chance");
-            else if (MultiPhotoSelectActivity.programID.equals("4"))
+            else if (MultiPhotoSelectActivity.programID.equals("10"))
                 s.insertInitialData("appName", "Pratham Digital - Pratham Institute");
             else if (MultiPhotoSelectActivity.programID.equals("8"))
                 s.insertInitialData("appName", "Pratham Digital - ECE");
@@ -117,7 +125,7 @@ public class SignInActivity extends AppCompatActivity {
                 s.Update("appName", "Pratham Digital - Read India");
             else if (MultiPhotoSelectActivity.programID.equals("3"))
                 s.Update("appName", "Pratham Digital - Second Chance");
-            else if (MultiPhotoSelectActivity.programID.equals("4"))
+            else if (MultiPhotoSelectActivity.programID.equals("10"))
                 s.Update("appName", "Pratham Digital - Pratham Institute");
             else if (MultiPhotoSelectActivity.programID.equals("8"))
                 s.Update("appName", "Pratham Digital - ECE");
@@ -318,6 +326,16 @@ public class SignInActivity extends AppCompatActivity {
         StatusDBHelper s = new StatusDBHelper(this);
         s.Update("ProgramID", MultiPhotoSelectActivity.programID);
         BackupDatabase.backup(this);
+
+        if (MultiPhotoSelectActivity.programID.equals("10")) {
+            btn_Regular_5to7.setVisibility(View.GONE);
+            btn_Regular_8to14.setVisibility(View.GONE);
+            btn_Regular_14to18.setVisibility(View.VISIBLE);
+        } else {
+            btn_Regular_5to7.setVisibility(View.VISIBLE);
+            btn_Regular_8to14.setVisibility(View.VISIBLE);
+            btn_Regular_14to18.setVisibility(View.GONE);
+        }
     }
 
 
@@ -470,10 +488,26 @@ public class SignInActivity extends AppCompatActivity {
         }
     }
 
+    public void Login14to18Multiphoto(View view) {
+        MultiPhotoSelectActivity.sessionId = new Utility().GetUniqueID().toString();
+        if (loginMode.contains("QR")) {
+            Intent i = new Intent(this, QRLogin.class);
+            startActivity(i);
+        } else {
+            Intent i = new Intent(this, MultiPhotoSelectActivity.class);
+            i.putExtra("ageGroup", "14to18");
+            MyApplication.ageGrp = "14";
+            startActivity(i);
+        }
+
+    }
+
     @Override
     public void onBackPressed() {
         System.exit(0);
         finishAffinity();
         super.onBackPressed();
     }
+
+
 }

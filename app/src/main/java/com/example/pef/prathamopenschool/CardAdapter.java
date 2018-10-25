@@ -383,6 +383,8 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> 
                         intent.putExtra("path", path.toString());
                         intent.putExtra("resId", resId);
                         intent.putExtra("resName", resName);
+                        intent.putExtra("resType", resType);
+
                         Runtime rs = Runtime.getRuntime();
                         rs.freeMemory();
                         rs.gc();
@@ -408,6 +410,8 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> 
                         intent.putExtra("path", path.toString());
                         intent.putExtra("resId", resId);
                         intent.putExtra("resName", resName);
+                        intent.putExtra("resType", resType);
+
                         Runtime rs = Runtime.getRuntime();
                         rs.freeMemory();
                         rs.gc();
