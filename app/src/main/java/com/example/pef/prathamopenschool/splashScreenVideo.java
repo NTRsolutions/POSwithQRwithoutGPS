@@ -629,10 +629,10 @@ public class splashScreenVideo extends AppCompatActivity {
         }
         if (apkType == false) {
             s = new StatusDBHelper(this);
-            s.insertInitialData("apkType", "QRCode, NonGPS, Shuffled Content");
+            s.insertInitialData("apkType", "QRCode, NonGPS, Regular Content");
         } else {
             s = new StatusDBHelper(this);
-            s.Update("apkType", "QRCode, NonGPS, Shuffled Content");
+            s.Update("apkType", "QRCode, NonGPS, Regular Content");
         }
         if (DBVersion == false) {
             s = new StatusDBHelper(this);
