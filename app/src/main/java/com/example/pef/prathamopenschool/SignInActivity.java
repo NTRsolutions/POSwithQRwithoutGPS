@@ -400,7 +400,7 @@ public class SignInActivity extends AppCompatActivity {
             startActivity(i);
         } else {
             Intent i = new Intent(this, MultiPhotoSelectActivity.class);
-            i.putExtra("ageGroup", "5to7");
+            i.putExtra("ageGroup", "5");
             MyApplication.ageGrp = "5";
             startActivity(i);
         }
@@ -414,7 +414,7 @@ public class SignInActivity extends AppCompatActivity {
             startActivity(i);
         } else {
             Intent i = new Intent(this, MultiPhotoSelectActivity.class);
-            i.putExtra("ageGroup", "8to14");
+            i.putExtra("ageGroup", "8");
             MyApplication.ageGrp = "8";
             startActivity(i);
         }
@@ -427,7 +427,7 @@ public class SignInActivity extends AppCompatActivity {
             startActivity(i);
         } else {
             Intent i = new Intent(this, MultiPhotoSelectActivity.class);
-            i.putExtra("ageGroup", "15to18");
+            i.putExtra("ageGroup", "15");
             MyApplication.ageGrp = "15";
             startActivity(i);
         }
