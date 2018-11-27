@@ -68,7 +68,7 @@ public class SignInActivity extends AppCompatActivity {
     private String loginMode;
 //    public static String sessionStartTime;
 
-    ImageButton btn_Regular_5to7, btn_Regular_8to14, btn_Regular_14to18;
+    ImageButton btn_Regular_5to7, btn_Regular_8to14, btn_Regular_14to18, btn_vocational;
 
 
     @Override
@@ -80,6 +80,7 @@ public class SignInActivity extends AppCompatActivity {
         btn_Regular_5to7 = findViewById(R.id.btn_Regular_5to7);
         btn_Regular_8to14 = findViewById(R.id.btn_Regular_8to14);
         btn_Regular_14to18 = findViewById(R.id.btn_Regular_14to18);
+        btn_vocational = findViewById(R.id.btn_vocational);
 
         // Multiphotoselect initialization
         MultiPhotoSelectActivity.dilog = new DilogBoxForProcess();
@@ -113,6 +114,8 @@ public class SignInActivity extends AppCompatActivity {
                 s.insertInitialData("appName", "Pratham Digital - Pratham Institute");
             else if (MultiPhotoSelectActivity.programID.equals("8"))
                 s.insertInitialData("appName", "Pratham Digital - ECE");
+            else if (MultiPhotoSelectActivity.programID.equals("13"))
+                s.insertInitialData("appName", "Pratham Digital - Hamara Gaon");
             else
                 s.insertInitialData("appName", "Pratham Digital");
 
@@ -129,8 +132,27 @@ public class SignInActivity extends AppCompatActivity {
                 s.Update("appName", "Pratham Digital - Pratham Institute");
             else if (MultiPhotoSelectActivity.programID.equals("8"))
                 s.Update("appName", "Pratham Digital - ECE");
+            else if (MultiPhotoSelectActivity.programID.equals("13"))
+                s.Update("appName", "Pratham Digital - Hamara Gaon");
             else
                 s.Update("appName", "Pratham Digital");
+
+            // set Title according to program
+            if (MultiPhotoSelectActivity.programID.equals("1"))
+                setTitle("Pratham Digital - H Learning");
+            else if (MultiPhotoSelectActivity.programID.equals("2"))
+                setTitle("Pratham Digital - Read India");
+            else if (MultiPhotoSelectActivity.programID.equals("3"))
+                setTitle("Pratham Digital - Second Chance");
+            else if (MultiPhotoSelectActivity.programID.equals("10"))
+                setTitle("Pratham Digital - Pratham Institute");
+            else if (MultiPhotoSelectActivity.programID.equals("8"))
+                setTitle("Pratham Digital - ECE");
+            else if (MultiPhotoSelectActivity.programID.equals("13"))
+                setTitle("Pratham Digital - Hamara Gaon");
+            else
+                setTitle("Pratham Digital");
+
         }
 
         String deviceID = "";
@@ -177,107 +199,17 @@ public class SignInActivity extends AppCompatActivity {
         }
         sInstance = this;
 
-        /*// Timer Start
-        // Todo get GPS DateTime & Location
-        if (MyApplication.gpsTimer == null) {
-            // Execute GPS Location & Time Dialog
-            // GPS Signal Dialog
-            gpsTimeDialog = new Dialog(this);
-            gpsTimeDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-            gpsTimeDialog.setContentView(R.layout.customgpsdialog);
-            gpsTimeDialog.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT);
-
-            GifView gifView = gpsTimeDialog.findViewById(R.id.gif_satellite);
-            gifView.setGifResource(R.drawable.satellite);
-
-            // Setting Dialog
-            gpsTimeDialog.setCanceledOnTouchOutside(false);
-            gpsTimeDialog.setCancelable(false);
-            gpsTimeDialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
-            gpsTimeDialog.show();
-//            MyApplication.getInstance().getLocation(SignInActivity.this);
-
-            // if time more than minute then show " Go outside dialog " i.e set message
-            tv_msgBottom = gpsTimeDialog.findViewById(R.id.tv_msgBottom);
-            tv_msgBottom.setVisibility(View.GONE);
-            try {
-                doAfterSomeTime();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }*/
-
     }
 
 
     @Subscribe
     public void onEvent(Short msg) {
         if (msg == EventBusMSG.UPDATE_TRACK) {
-//            if (gpsTimeDialog != null) {
-//                gpsTimeDialog.dismiss();
-//                MyApplication.getInstance().stopLocationUpdate();
-//            }
             try {
                 MyApplication.getInstance().stopLocationUpdate();
             } catch (Exception e) {
                 e.printStackTrace();
             }
-/*            //todo get time and start timer
-            DateFormat format = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss", Locale.ENGLISH);
-            Date gdate = new Date(MyApplication.location.getTime());
-            String gpsDateTime = format.format(gdate);
-            Log.d("onLocationChanged:::", gpsDateTime);
-            Log.d("onLocationChanged:::", MyApplication.location.getLatitude() + "");
-            Log.d("onLocationChanged:::", MyApplication.location.getLongitude() + "");
-
-            // Check if location & gpstime is available
-            StatusDBHelper s = new StatusDBHelper(this);
-            boolean latitudeAvailable = false;
-            boolean longitudeAvailable = false;
-            boolean GPSDateTimeAvailable = false;
-            boolean gpsFixDuration = false;
-            latitudeAvailable = s.initialDataAvailable("Latitude");
-            longitudeAvailable = s.initialDataAvailable("Longitude");
-            GPSDateTimeAvailable = s.initialDataAvailable("GPSDateTime");
-            gpsFixDuration = s.initialDataAvailable("gpsFixDuration");
-            if (latitudeAvailable == false) {
-                s = new StatusDBHelper(this);
-                s.insertInitialData("Latitude", String.valueOf(MyApplication.location.getLatitude()));
-            }
-            if (longitudeAvailable == false) {
-                s = new StatusDBHelper(this);
-                s.insertInitialData("Longitude", String.valueOf(MyApplication.location.getLongitude()));
-            }
-            if (GPSDateTimeAvailable == false) {
-                s = new StatusDBHelper(this);
-                s.insertInitialData("GPSDateTime", gpsDateTime);
-                // Reset Timer
-                MyApplication.resetTimer();
-                MyApplication.startTimer();
-            } else {
-                s = new StatusDBHelper(this);
-                s.Update("GPSDateTime", gpsDateTime);
-                // Reset Timer
-                MyApplication.resetTimer();
-                MyApplication.startTimer();
-            }
-
-            // GPS Fix Time
-            if (gpsFixDuration == false) {
-                s = new StatusDBHelper(this);
-                s.insertInitialData("gpsFixDuration", "");
-            } else {
-                // fetch & append gps fix
-                s = new StatusDBHelper(this);
-                String previousFix = s.getValue("gpsFixDuration");
-                s.Update("gpsFixDuration", "" + previousFix + "," + MyApplication.getGPSFixTimerCount());
-//            Toast.makeText(this, "GPSFixDuration = " + MyApplication.getGPSFixTimerCount(), Toast.LENGTH_SHORT).show();
-            }
-
-            BackupDatabase.backup(this);
-            Log.d("before : ", "GetCurrentDateTime");
-            sessionStartTime = new Utility().GetCurrentDateTime(false);
-            Log.d("beforeafter : ", "GetCurrentDateTime ");*/
         }
     }
 
@@ -308,9 +240,6 @@ public class SignInActivity extends AppCompatActivity {
 
         checkGPSEnabled();
 
-//        if (MyApplication.location == null) {
-//            MyApplication.getInstance().getLocation(SignInActivity.this);
-//        }
         // Reset Timer
         MyApplication.resetGPSFixTimer();
         MyApplication.startGPSFixTimer();
@@ -331,10 +260,13 @@ public class SignInActivity extends AppCompatActivity {
             btn_Regular_5to7.setVisibility(View.GONE);
             btn_Regular_8to14.setVisibility(View.GONE);
             btn_Regular_14to18.setVisibility(View.VISIBLE);
+            btn_vocational.setVisibility(View.VISIBLE);
+
         } else {
             btn_Regular_5to7.setVisibility(View.VISIBLE);
             btn_Regular_8to14.setVisibility(View.VISIBLE);
             btn_Regular_14to18.setVisibility(View.GONE);
+            btn_vocational.setVisibility(View.GONE);
         }
     }
 
@@ -495,11 +427,23 @@ public class SignInActivity extends AppCompatActivity {
             startActivity(i);
         } else {
             Intent i = new Intent(this, MultiPhotoSelectActivity.class);
-            i.putExtra("ageGroup", "14to18");
-            MyApplication.ageGrp = "14";
+            i.putExtra("ageGroup", "15to18");
+            MyApplication.ageGrp = "15";
             startActivity(i);
         }
+    }
 
+    public void LoginVocationalMultiphoto(View view) {
+        MultiPhotoSelectActivity.sessionId = new Utility().GetUniqueID().toString();
+        if (loginMode.contains("QR")) {
+            Intent i = new Intent(this, QRLogin.class);
+            startActivity(i);
+        } else {
+            Intent i = new Intent(this, MultiPhotoSelectActivity.class);
+            i.putExtra("ageGroup", "25");
+            MyApplication.ageGrp = "25";
+            startActivity(i);
+        }
     }
 
     @Override
