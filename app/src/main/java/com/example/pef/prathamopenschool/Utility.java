@@ -4,7 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.res.AssetManager;
 import android.os.Environment;
-import android.util.Log;
+import android.provider.Settings;
 
 import org.json.JSONObject;
 
@@ -43,7 +43,7 @@ public class Utility {
     }
 
     public static void dismissDialog() {
-        if (dialog!=null) {
+        if (dialog != null) {
             dialog.dismiss();
         }
     }
@@ -151,6 +151,10 @@ public class Utility {
         }
         // in milis
         return diff;
+    }
+
+    public String getDeviceID() {
+        return Settings.Secure.getString(MyApplication.getInstance().getContentResolver(), Settings.Secure.ANDROID_ID);
     }
 
 }
