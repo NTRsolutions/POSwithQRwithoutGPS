@@ -290,6 +290,19 @@ public class PullData extends AppCompatActivity implements ConnectivityReceiver.
 
     private void UpdateJsonOnline(String baseurl, final String filename, String state, final String programid) {
 
+        //if program id = 13 then create Aser.json if not exists
+        if (MultiPhotoSelectActivity.programID.equalsIgnoreCase("13")) {
+            // check Aser.json exists & create empty if not found
+            File Aser = new File(Environment.getExternalStorageDirectory() + "/.POSinternal/Json/Aser.json");
+            if (!Aser.exists()) {
+                try {
+                    Aser.createNewFile();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
         OkHttpClient client = new OkHttpClient();
 
         HttpUrl.Builder urlBuilder = HttpUrl.parse(baseurl).newBuilder();
@@ -436,6 +449,9 @@ public class PullData extends AppCompatActivity implements ConnectivityReceiver.
                             } else if (filename.equalsIgnoreCase("Group")) {
                                 Log.d("Json : ", "Student");
                                 UpdateJsonOnline(Utility.getProperty("HGpullStudentsURL", PullData.this), "Student", selectedState, programid);
+                            } else if (filename.equalsIgnoreCase("Student")) {
+                                Log.d("Json : ", "Aser");
+                                UpdateJsonOnline(Utility.getProperty("HGpullAserURL", PullData.this), "Aser", selectedState, programid);
                             } else {
                                 Log.d("Json : ", "DONE");
                                 if (pd != null && pd.isShowing())
