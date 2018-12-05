@@ -68,7 +68,7 @@
             android:visibility="gone"
             android:layout_margin="64dp"
             android:layout_weight="1"
-            android:background="@drawable/vocational_skilling"
+            android:background="@drawable/ic_pi_vocational"
             android:onClick="LoginVocationalMultiphoto"
             android:scaleType="fitCenter" />
 

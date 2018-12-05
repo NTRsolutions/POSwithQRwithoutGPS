@@ -27,20 +27,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ab24c15-082a-415e-9544-107f250a0e10" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_pi_vocational.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/POS with QR Code without GPS.txt" beforeDir="false" afterPath="$PROJECT_DIR$/POS with QR Code without GPS.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/config.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/AddStudentProfiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/AddStudentProfiles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/CrlPullPushTransferUsageScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/CrlPullPushTransferUsageScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/EditStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/EditStudent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/PullData.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/PullData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/PushData.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/PushData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/splashScreenVideo.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/splashScreenVideo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-sw600dp/activity_sign_in.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-sw600dp/activity_sign_in.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_student_profiles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_student_profiles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_crl_add_edit_screen.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_crl_add_edit_screen.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_edit_student.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_edit_student.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_sign_in.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_sign_in.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_endline_dialog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_endline_dialog.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -62,31 +60,7 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="splashScreenVideo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/splashScreenVideo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="631" column="68" selection-start-line="631" selection-start-column="68" selection-end-line="631" selection-end-column="68" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/MainActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="959" column="13" selection-start-line="959" selection-start-column="13" selection-end-line="959" selection-end-column="13" />
-              <folding>
-                <element signature="e#2047#2055#0" expanded="true" />
-                <element signature="e#2109#2117#0" expanded="true" />
-                <element signature="e#37752#37780#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -98,36 +72,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>student</find>
-      <find>GetAllByStudentID(StudentUniqID, 0)</find>
-      <find>aserdata</find>
-      <find>pull</find>
-      <find>check</find>
-      <find>exists</find>
-      <find>json</find>
-      <find>exist</find>
-      <find>Pulle</find>
-      <find>insert</find>
-      <find>adb.upda</find>
-      <find>group</find>
-      <find>popula</find>
-      <find>initia</find>
-      <find>populate</find>
       <find>populategr</find>
       <find>aserf</find>
       <find>clear</find>
       <find>ASerForm</find>
       <find>populateg</find>
-      <find>submit</find>
       <find>onpause</find>
       <find>onresume</find>
-      <find>endline1</find>
       <find>setDefa</find>
       <find>initi</find>
       <find>setdefault</find>
       <find>2.1.17</find>
       <find>reg</find>
       <find>shuff</find>
+      <find>2</find>
+      <find>settext</find>
+      <find>edt</find>
+      <find>max</find>
+      <find>populate</find>
+      <find>endline1</find>
+      <find>baseline</find>
+      <find>submit</find>
+      <find>startact</find>
+      <find>capture</find>
+      <find>onactivi</find>
+      <find>sp</find>
+      <find>reset</find>
+      <find>groups_spinner</find>
+      <find>groups_spinner.setSelection(0);</find>
+      <find>initia</find>
+      <find>btn_DatePicker</find>
     </findStrings>
     <replaceStrings>
       <replace>layout_margin=&quot;8dp&quot;</replace>
@@ -2431,26 +2405,26 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/PlayVideoOld.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/AssignGroups.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/CrlAddEditScreen.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_crl_add_edit_screen.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/PushSyncClient.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout-sw600dp/activity_sign_in.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_sign_in.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/MultiPhotoSelectActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/SignInActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_endline_dialog.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/Utility.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_add_student_profiles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/UniversalChildFormFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/PushData.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/CrlPullPushTransferUsageScreen.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/PullData.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/EditStudent.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_edit_student.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/AddStudentProfiles.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/assets/config.properties" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/splashScreenVideo.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_sign_in.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout-sw600dp/activity_sign_in.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_crl_add_edit_screen.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/EditStudent.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/AddStudentProfiles.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_add_student_profiles.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_endline_dialog.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_edit_student.xml" />
       </list>
     </option>
   </component>
@@ -2469,6 +2443,35 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane" />
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="POSwithQRwithoutGPS" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="POSwithQRwithoutGPS" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="POSwithQRwithoutGPS" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+            </path>
+            <path>
+              <item name="POSwithQRwithoutGPS" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <expand>
@@ -2515,29 +2518,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView">
-        <subPane>
-          <expand>
-            <path>
-              <item name="POSwithQRwithoutGPS" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-            </path>
-            <path>
-              <item name="POSwithQRwithoutGPS" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-            </path>
-            <path>
-              <item name="POSwithQRwithoutGPS" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="assets" type="edd41e36:AndroidSourceTypeNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2894,11 +2874,18 @@
       <option name="project" value="LOCAL" />
       <updated>1543407723837</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="/************************************************************ v2.1.18 ******************************************************/&#10;v2.1.18 (now on this app will be used for Pratham's Read India (Hamara Gaon) program so villages will be there)&#10;&#10;Nov 28&#10;Aser entries for HL in add student --- done&#10;New UI Add Student --- done&#10;&#10;Nov 29&#10;push self data crash --- resolved&#10;push crltransfer data --- resolved&#10;Aser Entry in Add student endline only issue --- resolved&#10;Aser entries for HL in Edit student --- done&#10;New UI Edit Student --- done&#10;Pull aser table ---- done&#10;edit student not reflection if on resume called --- done">
+      <created>1543490106464</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1543490106464</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
     <layout>
       <window_info anchor="bottom" id="Android Profiler" order="7" weight="0.32888147" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -2907,33 +2894,68 @@
       <window_info id="Build Variants" order="2" sideWeight="0.51086956" side_tool="true" weight="0.22919819" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.51664144" side_tool="true" weight="0.38564274" />
-      <window_info anchor="right" id="Preview" order="7" weight="0.41679275" />
-      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32888147" />
+      <window_info anchor="right" id="Preview" order="7" weight="0.49092284" />
       <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32888147" />
       <window_info anchor="bottom" id="Terminal" order="12" weight="0.327212" />
       <window_info anchor="bottom" id="Logcat" order="9" sideWeight="0.4924357" weight="0.721202" />
       <window_info id="Captures" order="3" weight="0.24962178" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="Designer" order="5" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48913044" visible="true" weight="0.23146747" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48913044" weight="0.23146747" />
       <window_info anchor="bottom" id="Build" order="14" weight="0.509182" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32554257" />
       <window_info anchor="right" id="Gradle" order="5" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24962178" />
       <window_info anchor="right" id="Device File Explorer" order="8" side_tool="true" weight="0.32980332" />
       <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.48335856" weight="0.38564274" />
+      <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="right" id="Assistant" order="9" weight="0.32980332" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32885906" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Gradle Console" order="13" sideWeight="0.5030257" side_tool="true" weight="0.59563756" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32554257" />
     </layout>
+    <layout-to-restore>
+      <window_info anchor="bottom" id="Build" order="14" weight="0.509182" />
+      <window_info id="Designer" order="5" />
+      <window_info anchor="bottom" id="Gradle Console" order="13" sideWeight="0.5030257" side_tool="true" weight="0.59563756" />
+      <window_info id="Build Variants" order="2" sideWeight="0.51086956" side_tool="true" weight="0.22919819" />
+      <window_info id="Image Layers" order="6" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Android Profiler" order="7" weight="0.32888147" />
+      <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info id="Captures" order="3" weight="0.24962178" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.51664144" side_tool="true" weight="0.38564274" />
+      <window_info active="true" anchor="right" id="Preview" order="7" visible="true" weight="0.49092284" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32554257" />
+      <window_info anchor="right" id="Device File Explorer" order="8" side_tool="true" weight="0.32980332" />
+      <window_info anchor="right" id="Assistant" order="9" weight="0.32980332" />
+      <window_info anchor="bottom" id="Logcat" order="9" sideWeight="0.4924357" weight="0.721202" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32888147" />
+      <window_info anchor="bottom" id="Terminal" order="12" weight="0.327212" />
+      <window_info anchor="right" id="Gradle" order="5" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48913044" weight="0.23146747" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32885906" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.24962178" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.48335856" weight="0.38564274" />
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -2962,7 +2984,8 @@
     <MESSAGE value="Nov 23&#10;Resource Monitoring in Logs for -1 entry --- done&#10;JSinterface Log -1 entry --- done&#10;PlayVideo Log -1 entry --- done&#10;PlayVideoOld Log -1 entry --- done&#10;CardAdapter resid passing --- done" />
     <MESSAGE value="Nov 27&#10;make necessary changes for program id 13 Hamara Gaon PullData, signin, multiphoto, config, pushsyncclient --- done&#10;add vocational (age 18-30) training in PI program id 10 --- done&#10;change sign in activity ui --- done&#10;change sign in java --- done&#10;change display 7 14 age condition from age &gt; 6 to &amp;&amp; age &lt;15 --- done&#10;new vocational training image --- done&#10;appname on signing activity --- done&#10;multiphoto select --- display std by age grp (age 18-30)  i.e filter attendance --- done&#10;mainactivity --- display content fullcontent &amp; vocational (age 18-30) --- done" />
     <MESSAGE value="Nov 28&#10;Aser entries for HL in add student --- done&#10;New UI Add Student --- done&#10;&#10;Nov 29&#10;Aser entries for HL in Edit student --- &#10;New UI Edit Student --- &#10;aaj ka sawal ----" />
-    <option name="LAST_COMMIT_MESSAGE" value="Nov 28&#10;Aser entries for HL in add student --- done&#10;New UI Add Student --- done&#10;&#10;Nov 29&#10;Aser entries for HL in Edit student --- &#10;New UI Edit Student --- &#10;aaj ka sawal ----" />
+    <MESSAGE value="/************************************************************ v2.1.18 ******************************************************/&#10;v2.1.18 (now on this app will be used for Pratham's Read India (Hamara Gaon) program so villages will be there)&#10;&#10;Nov 28&#10;Aser entries for HL in add student --- done&#10;New UI Add Student --- done&#10;&#10;Nov 29&#10;push self data crash --- resolved&#10;push crltransfer data --- resolved&#10;Aser Entry in Add student endline only issue --- resolved&#10;Aser entries for HL in Edit student --- done&#10;New UI Edit Student --- done&#10;Pull aser table ---- done&#10;edit student not reflection if on resume called --- done" />
+    <option name="LAST_COMMIT_MESSAGE" value="/************************************************************ v2.1.18 ******************************************************/&#10;v2.1.18 (now on this app will be used for Pratham's Read India (Hamara Gaon) program so villages will be there)&#10;&#10;Nov 28&#10;Aser entries for HL in add student --- done&#10;New UI Add Student --- done&#10;&#10;Nov 29&#10;push self data crash --- resolved&#10;push crltransfer data --- resolved&#10;Aser Entry in Add student endline only issue --- resolved&#10;Aser entries for HL in Edit student --- done&#10;New UI Edit Student --- done&#10;Pull aser table ---- done&#10;edit student not reflection if on resume called --- done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3099,42 +3122,38 @@
           <properties />
           <option name="timeStamp" value="214" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/EditStudent.java</url>
+          <line>251</line>
+          <properties />
+          <option name="timeStamp" value="229" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/EditStudent.java</url>
+          <line>277</line>
+          <properties />
+          <option name="timeStamp" value="230" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/EditStudent.java</url>
+          <line>262</line>
+          <properties />
+          <option name="timeStamp" value="231" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/EditStudent.java</url>
+          <line>247</line>
+          <properties />
+          <option name="timeStamp" value="232" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="228" />
+      <option name="time" value="235" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/Group.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-289">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/GroupList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/VillageList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="22" column="18" lean-forward="true" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/Village.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/GroupDBHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
@@ -3164,13 +3183,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_assign_groups.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
           <caret line="97" column="38" selection-start-line="97" selection-start-column="38" selection-end-line="97" selection-end-column="38" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/StatusDBHelper.java">
@@ -3188,23 +3207,23 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_qrlogin.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="34" lean-forward="true" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/custom_dialog_for_qrscan.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/custom_dialog_for_qrscan.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="485">
           <caret line="65" lean-forward="true" selection-end-line="65" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="jar://C:/AndroidSDK/platforms/android-26/android.jar!/android/content/ContextWrapper.class">
@@ -3222,13 +3241,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
           <caret line="249" lean-forward="true" selection-start-line="245" selection-end-line="249" />
         </state>
+      </provider>
+      <provider editor-type-id="android-manifest">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/WebViewService.java">
@@ -3259,16 +3278,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_crl_add_edit_screen.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="97" column="40" lean-forward="true" selection-start-line="97" selection-start-column="40" selection-end-line="97" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/PushSyncClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
@@ -3277,13 +3286,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_multi_photo_select.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="46" lean-forward="true" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/CardAdapter.java">
@@ -3297,31 +3306,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
           <caret line="67" column="28" selection-start-line="67" selection-start-column="28" selection-end-line="67" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/btn_age_14_18.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_sign_in.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="74" lean-forward="true" selection-start-line="64" selection-end-line="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-sw600dp/activity_sign_in.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="995">
-          <caret line="73" lean-forward="true" selection-start-line="63" selection-end-line="73" />
         </state>
       </provider>
     </entry>
@@ -3345,13 +3329,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_universal_child_form_fragment.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="261" column="41" selection-start-line="261" selection-start-column="41" selection-end-line="261" selection-end-column="41" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/interfaces/DataInterface.java">
@@ -3379,9 +3363,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="446">
           <caret line="158" lean-forward="true" selection-start-line="155" selection-start-column="4" selection-end-line="158" />
-          <folding>
-            <element signature="method#DateDifferentExample#0;class#Utility#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3431,55 +3412,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="800" selection-start-line="798" selection-end-line="800" />
-          <folding>
-            <element signature="e#18701#18904#0" />
-            <element signature="e#54794#54795#0" expanded="true" />
-            <element signature="e#54835#54836#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_endline_dialog.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="42" lean-forward="true" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_add_student_profiles.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="99" column="41" lean-forward="true" selection-start-line="99" selection-start-column="41" selection-end-line="99" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_edit_student.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="330" column="25" selection-start-line="330" selection-start-column="25" selection-end-line="330" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/EditStudent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="82" column="24" lean-forward="true" selection-start-line="82" selection-start-column="24" selection-end-line="82" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/AddStudentProfiles.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="537" column="57" lean-forward="true" selection-start-line="537" selection-start-column="57" selection-end-line="537" selection-end-column="57" />
         </state>
       </provider>
     </entry>
@@ -3497,23 +3429,127 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/splashScreenVideo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="631" column="68" selection-start-line="631" selection-start-column="68" selection-end-line="631" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="236">
           <caret line="959" column="13" selection-start-line="959" selection-start-column="13" selection-end-line="959" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/btn_age_14_18.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_pi_vocational.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_pi_vocational.jpg" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_sign_in.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="71" column="58" selection-start-line="71" selection-start-column="58" selection-end-line="71" selection-end-column="58" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-sw600dp/activity_sign_in.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="58" column="40" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="40" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/splashScreenVideo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="299" lean-forward="true" selection-start-line="299" selection-end-line="299" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_crl_add_edit_screen.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="62" column="37" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="37" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/EditStudent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="1060" selection-start-line="1060" selection-end-line="1060" />
           <folding>
-            <element signature="e#2047#2055#0" expanded="true" />
-            <element signature="e#2109#2117#0" expanded="true" />
-            <element signature="e#37752#37780#0" expanded="true" />
+            <element signature="class#2719:14384" />
+            <element signature="class#14432:26096" />
+            <element signature="class#26144:37808" />
+            <element signature="e#53313#53314#0" expanded="true" />
+            <element signature="e#53356#53357#0" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/custom_spinner.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pef/prathamopenschool/AddStudentProfiles.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="775" column="57" selection-start-line="775" selection-start-column="43" selection-end-line="775" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/custom_border.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_endline_dialog.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="43" column="47" selection-start-line="43" selection-start-column="47" selection-end-line="43" selection-end-column="47" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_edit_student.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="301" selection-start-line="301" selection-end-line="301" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_add_student_profiles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="281" column="53" selection-start-line="281" selection-start-column="53" selection-end-line="281" selection-end-column="53" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
   </component>
