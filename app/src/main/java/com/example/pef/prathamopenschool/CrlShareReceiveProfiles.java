@@ -1522,4 +1522,7 @@ public class CrlShareReceiveProfiles extends AppCompatActivity implements Extrac
     }
 
 
+    public void shareContent(View view) {
+
+    }
 }

@@ -110,18 +110,6 @@ public class PushData extends AppCompatActivity {
             // Disabling Button if clicked to avoid repushing on server
             btn_pushReceivedData.setClickable(false);
 
-//            Toast.makeText(PushData.this, "Connected to the Internet !!!", Toast.LENGTH_SHORT).show();
-
-
-            //Moving to Receive usage
-//            String path = Environment.getExternalStorageDirectory().toString() + "/Bluetooth";
-//            File blueToothDir = new File(path);
-//            String destFolder = Environment.getExternalStorageDirectory() + "/.POSinternal/pushedUsage";
-//            if (!blueToothDir.exists()) {
-//                btn_pushReceivedData.setClickable(true);
-//                Toast.makeText(this, "Bluetooth folder does not exist", Toast.LENGTH_SHORT).show();
-//            } else
-
             File srcFolder = new File(Environment.getExternalStorageDirectory() + "/.POSDBBackups");
             String destFolder = Environment.getExternalStorageDirectory() + "/.POSinternal/pushedUsage";
             if (!srcFolder.exists()) {
@@ -313,40 +301,14 @@ public class PushData extends AppCompatActivity {
 
     }
 
-//    // Transfer Data Over Bluetooth
-//    public void transferData(View v) {
-//
-//        createJsonforTransfer();
-////************************** integrate push data code here********************/
-//
-//        String fileName = "";
-//
-//        ArrayList<String> arrayList = new ArrayList<String>();
-//        _array = new JSONArray();
-//
-//        //  test();
-//        //test function is used only for reading database file from assets
-//        //Used when we want to push data from our side.
-//
-//        //enableBlu();
-//        progress = new ProgressDialog(PushData.this);
-//        progress.setMessage("Please Wait...");
-//        progress.setCanceledOnTouchOutside(false);
-//        progress.show();
-//
-//        TreansferFile("pushNewDataToServer-");
-//
-//    }
-
     public void createJsonforTransfer() {
         //we will push logs and scores directly to the server
 
         ScoreDBHelper scoreDBHelper = new ScoreDBHelper(this);
-        List<Score> scores = scoreDBHelper.GetAll();
+        List<Score> scores = new ArrayList<>();
+        scores = scoreDBHelper.GetAll();
 
         if (scores == null) {
-        } else if (scores.size() == 0) {
-            // No Score No Transfer
         } else {
             try {
 
@@ -640,8 +602,13 @@ public class PushData extends AppCompatActivity {
                                 + ", \"newCrlsData\": " + crlData
                                 + ", \"newGroupsData\": " + grpData
                                 + ", \"SessionTableData\": " + sessionData
-                                + ", \"AserTableData\": " + aserData + "}";//Ketan
-                        WriteSettings(c, requestString, "pushNewDataToServer-" + (deviceId.equals(null) ? "0000" : deviceId));
+                                + ", \"AserTableData\": " + aserData + "}";
+
+                        if (scoreData.length() == 0 && logsData.length() == 0 && attendanceData.length() == 0 && studentData.length() == 0
+                                && crlData.length() == 0 && grpData.length() == 0 && aserData.length() == 0 && sessionData.length() == 0)
+                            Toast.makeText(this, "There is no data to Push !!!", Toast.LENGTH_SHORT).show();
+                        else
+                            WriteSettings(c, requestString, "pushNewDataToServer-" + (deviceId.equals(null) ? "0000" : deviceId));
                     }
                 }
             } catch (JSONException e) {
