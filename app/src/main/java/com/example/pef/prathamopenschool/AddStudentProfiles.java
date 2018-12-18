@@ -1,5 +1,7 @@
 package com.example.pef.prathamopenschool;
 
+//http://www.deboma.com/article/mobile-development/22/android-datepicker-and-age-calculation
+
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.Context;
@@ -27,17 +29,24 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+
 import java.io.File;
 import java.io.FileOutputStream;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.List;
+import java.util.Locale;
 import java.util.UUID;
 
 public class AddStudentProfiles extends AppCompatActivity {
 
     Spinner states_spinner, blocks_spinner, villages_spinner, groups_spinner;
-    EditText edt_Fname, edt_Mname, edt_Lname, edt_Age, edt_Class;
+    EditText edt_Fname, edt_Mname, edt_Lname, edt_Class;
     RadioGroup rg_Gender;
-    Button btn_Submit, btn_Clear, btn_Capture;
+    Button btn_Submit, btn_Clear, btn_Capture, btn_BirthDatePicker;
     VillageDBHelper database;
     GroupDBHelper gdb;
     StudentDBHelper sdb;
@@ -62,12 +71,13 @@ public class AddStudentProfiles extends AppCompatActivity {
     PlayVideo playVideo;
     boolean timer;
 
+    int stdAge = 0;
     StatusDBHelper statdb;
 
     Utility util;
 
     Spinner sp_BaselineLang, sp_NumberReco;
-    Button btn_DatePicker, btn_Endline1, btn_Endline2, btn_Endline3, btn_Endline4;
+    Button btn_EndlineDatePicker, btn_DatePicker, btn_Endline1, btn_Endline2, btn_Endline3, btn_Endline4;
     LinearLayout AserForm;
     public boolean EndlineButtonClicked = false;
 
@@ -79,6 +89,14 @@ public class AddStudentProfiles extends AppCompatActivity {
     int WA = 0;
     int WS = 0;
     int IC = 0;
+    String aserDate;
+
+    @Subscribe
+    public void onEvent(String msg) {
+        if (!msg.isEmpty()) {
+            btn_EndlineDatePicker.setText(msg);
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,11 +104,14 @@ public class AddStudentProfiles extends AppCompatActivity {
         setContentView(R.layout.activity_add_student_profiles);
         getSupportActionBar().hide();
 
+        EventBus.getDefault().register(AddStudentProfiles.this);
+
         initializeVariables();
         initializeStatesSpinner();
         initializeBaselineSpinner();
         initializeNumberRecoSpinner();
         initializeAserDate();
+        initializeBirthDate();
 
         btn_Capture.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -122,6 +143,16 @@ public class AddStudentProfiles extends AppCompatActivity {
                 CheckBox WordAdd = endlineDialog.findViewById(R.id.WordAdd);
                 CheckBox WordSub = endlineDialog.findViewById(R.id.WordSub);
                 Button btn_Submit = endlineDialog.findViewById(R.id.btn_Submit);
+                btn_EndlineDatePicker = endlineDialog.findViewById(R.id.btn_EndlineDatePicker);
+                btn_EndlineDatePicker.setText(util.GetCurrentDate().toString());
+                btn_EndlineDatePicker.setPadding(8, 8, 8, 8);
+                btn_EndlineDatePicker.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        DialogFragment newFragment = new DatePickerFragment();
+                        newFragment.show(getFragmentManager(), "EndlineDatePicker");
+                    }
+                });
 
                 // set values of endline
                 title.setText("Endline 1");
@@ -130,7 +161,7 @@ public class AddStudentProfiles extends AppCompatActivity {
                 ArrayAdapter<String> baselineAdapter = new ArrayAdapter<String>(AddStudentProfiles.this, R.layout.custom_spinner, baselineLangAdapter);
                 spinner_BaselineLang.setAdapter(baselineAdapter);
 
-                String[] NumberRecoAdapter = {"Number Recognition", "Beg", "0-9", "10-99", "100-999"};
+                String[] NumberRecoAdapter = {"Number Recognition", "Beg", "0-9", "10-99", "Sub", "Div"};
                 ArrayAdapter<String> recoAdapter = new ArrayAdapter<String>(AddStudentProfiles.this, R.layout.custom_spinner, NumberRecoAdapter);
                 spinner_NumberReco.setAdapter(recoAdapter);
 
@@ -194,7 +225,7 @@ public class AddStudentProfiles extends AppCompatActivity {
                             testT = 1;
                             langSpin = BaselineSpinnerValue;
                             numSpin = NumberSpinnerValue;
-
+                            aserDate = btn_EndlineDatePicker.getText().toString();
                             OA = OprAdd.isChecked() ? 1 : 0;
                             OS = OprSub.isChecked() ? 1 : 0;
                             OM = OprMul.isChecked() ? 1 : 0;
@@ -237,6 +268,16 @@ public class AddStudentProfiles extends AppCompatActivity {
                 CheckBox WordAdd = endlineDialog.findViewById(R.id.WordAdd);
                 CheckBox WordSub = endlineDialog.findViewById(R.id.WordSub);
                 Button btn_Submit = endlineDialog.findViewById(R.id.btn_Submit);
+                btn_EndlineDatePicker = endlineDialog.findViewById(R.id.btn_EndlineDatePicker);
+                btn_EndlineDatePicker.setText(util.GetCurrentDate().toString());
+                btn_EndlineDatePicker.setPadding(8, 8, 8, 8);
+                btn_EndlineDatePicker.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        DialogFragment newFragment = new DatePickerFragment();
+                        newFragment.show(getFragmentManager(), "EndlineDatePicker");
+                    }
+                });
 
                 // set values of endline
                 title.setText("Endline 2");
@@ -245,7 +286,7 @@ public class AddStudentProfiles extends AppCompatActivity {
                 ArrayAdapter<String> baselineAdapter = new ArrayAdapter<String>(AddStudentProfiles.this, R.layout.custom_spinner, baselineLangAdapter);
                 spinner_BaselineLang.setAdapter(baselineAdapter);
 
-                String[] NumberRecoAdapter = {"Number Recognition", "Beg", "0-9", "10-99", "100-999"};
+                String[] NumberRecoAdapter = {"Number Recognition", "Beg", "0-9", "10-99", "Sub", "Div"};
                 ArrayAdapter<String> recoAdapter = new ArrayAdapter<String>(AddStudentProfiles.this, R.layout.custom_spinner, NumberRecoAdapter);
                 spinner_NumberReco.setAdapter(recoAdapter);
 
@@ -308,6 +349,7 @@ public class AddStudentProfiles extends AppCompatActivity {
                             testT = 2;
                             langSpin = BaselineSpinnerValue;
                             numSpin = NumberSpinnerValue;
+                            aserDate = btn_EndlineDatePicker.getText().toString();
 
                             OA = OprAdd.isChecked() ? 1 : 0;
                             OS = OprSub.isChecked() ? 1 : 0;
@@ -351,6 +393,16 @@ public class AddStudentProfiles extends AppCompatActivity {
                 CheckBox WordAdd = endlineDialog.findViewById(R.id.WordAdd);
                 CheckBox WordSub = endlineDialog.findViewById(R.id.WordSub);
                 Button btn_Submit = endlineDialog.findViewById(R.id.btn_Submit);
+                btn_EndlineDatePicker = endlineDialog.findViewById(R.id.btn_EndlineDatePicker);
+                btn_EndlineDatePicker.setText(util.GetCurrentDate().toString());
+                btn_EndlineDatePicker.setPadding(8, 8, 8, 8);
+                btn_EndlineDatePicker.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        DialogFragment newFragment = new DatePickerFragment();
+                        newFragment.show(getFragmentManager(), "EndlineDatePicker");
+                    }
+                });
 
                 // set values of endline
                 title.setText("Endline 3");
@@ -359,7 +411,7 @@ public class AddStudentProfiles extends AppCompatActivity {
                 ArrayAdapter<String> baselineAdapter = new ArrayAdapter<String>(AddStudentProfiles.this, R.layout.custom_spinner, baselineLangAdapter);
                 spinner_BaselineLang.setAdapter(baselineAdapter);
 
-                String[] NumberRecoAdapter = {"Number Recognition", "Beg", "0-9", "10-99", "100-999"};
+                String[] NumberRecoAdapter = {"Number Recognition", "Beg", "0-9", "10-99", "Sub", "Div"};
                 ArrayAdapter<String> recoAdapter = new ArrayAdapter<String>(AddStudentProfiles.this, R.layout.custom_spinner, NumberRecoAdapter);
                 spinner_NumberReco.setAdapter(recoAdapter);
 
@@ -422,6 +474,7 @@ public class AddStudentProfiles extends AppCompatActivity {
                             testT = 3;
                             langSpin = BaselineSpinnerValue;
                             numSpin = NumberSpinnerValue;
+                            aserDate = btn_EndlineDatePicker.getText().toString();
 
                             OA = OprAdd.isChecked() ? 1 : 0;
                             OS = OprSub.isChecked() ? 1 : 0;
@@ -465,6 +518,16 @@ public class AddStudentProfiles extends AppCompatActivity {
                 CheckBox WordAdd = endlineDialog.findViewById(R.id.WordAdd);
                 CheckBox WordSub = endlineDialog.findViewById(R.id.WordSub);
                 Button btn_Submit = endlineDialog.findViewById(R.id.btn_Submit);
+                btn_EndlineDatePicker = endlineDialog.findViewById(R.id.btn_EndlineDatePicker);
+                btn_EndlineDatePicker.setText(util.GetCurrentDate().toString());
+                btn_EndlineDatePicker.setPadding(8, 8, 8, 8);
+                btn_EndlineDatePicker.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        DialogFragment newFragment = new DatePickerFragment();
+                        newFragment.show(getFragmentManager(), "EndlineDatePicker");
+                    }
+                });
 
                 // set values of endline
                 title.setText("Endline 4");
@@ -473,7 +536,7 @@ public class AddStudentProfiles extends AppCompatActivity {
                 ArrayAdapter<String> baselineAdapter = new ArrayAdapter<String>(AddStudentProfiles.this, R.layout.custom_spinner, baselineLangAdapter);
                 spinner_BaselineLang.setAdapter(baselineAdapter);
 
-                String[] NumberRecoAdapter = {"Number Recognition", "Beg", "0-9", "10-99", "100-999"};
+                String[] NumberRecoAdapter = {"Number Recognition", "Beg", "0-9", "10-99", "Sub", "Div"};
                 ArrayAdapter<String> recoAdapter = new ArrayAdapter<String>(AddStudentProfiles.this, R.layout.custom_spinner, NumberRecoAdapter);
                 spinner_NumberReco.setAdapter(recoAdapter);
 
@@ -536,6 +599,7 @@ public class AddStudentProfiles extends AppCompatActivity {
                             testT = 4;
                             langSpin = BaselineSpinnerValue;
                             numSpin = NumberSpinnerValue;
+                            aserDate = btn_EndlineDatePicker.getText().toString();
 
                             OA = OprAdd.isChecked() ? 1 : 0;
                             OS = OprSub.isChecked() ? 1 : 0;
@@ -578,7 +642,16 @@ public class AddStudentProfiles extends AppCompatActivity {
                         // Validations
                         if ((edt_Fname.getText().toString().matches("[a-zA-Z.? ]*")) && (edt_Lname.getText().toString().matches("[a-zA-Z.? ]*"))
                                 && (edt_Mname.getText().toString().matches("[a-zA-Z.? ]*"))
-                                && (edt_Age.getText().toString().matches("[0-9]+")) && (edt_Class.getText().toString().matches("[0-9]+"))) {
+                                && (!btn_BirthDatePicker.getText().toString().contains("Birth")) && (edt_Class.getText().toString().matches("[0-9]+"))) {
+
+                            Calendar cal = Calendar.getInstance();
+                            SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy", Locale.ENGLISH);
+                            try {
+                                cal.setTime(sdf.parse(btn_BirthDatePicker.getText().toString()));
+                            } catch (ParseException e) {
+                                e.printStackTrace();
+                            }
+                            stdAge = Integer.parseInt(Integer.toString(calculateAge(cal.getTimeInMillis())));
 
                             if (MultiPhotoSelectActivity.programID.equalsIgnoreCase("13")) {
                                 // either baseline spinners are fully filled or not filled at all
@@ -590,8 +663,8 @@ public class AddStudentProfiles extends AppCompatActivity {
                                     stdObj.FirstName = edt_Fname.getText().toString();
                                     stdObj.MiddleName = edt_Mname.getText().toString();
                                     stdObj.LastName = edt_Lname.getText().toString();
-                                    stdObj.Age = Integer.parseInt(String.valueOf(edt_Age.getText()));
-                                    stdObj.Class = Integer.parseInt(String.valueOf(edt_Class.getText()));
+                                    stdObj.Age = stdAge;
+                                    stdObj.stdClass = Integer.parseInt(String.valueOf(edt_Class.getText()));
                                     stdObj.UpdatedDate = util.GetCurrentDateTime(false);
                                     stdObj.Gender = gender;
                                     stdObj.GroupID = GrpID;
@@ -600,16 +673,19 @@ public class AddStudentProfiles extends AppCompatActivity {
                                     stdObj.StudentUID = "";
                                     stdObj.IsSelected = true;
                                     stdObj.CreatedOn = util.GetCurrentDateTime(false).toString();
+                                    stdObj.DOB = btn_BirthDatePicker.getText().toString();
                                     sdb.insertData(stdObj);
-
+                                    BackupDatabase.backup(AddStudentProfiles.this);
                                     if (MultiPhotoSelectActivity.programID.equalsIgnoreCase("13")) {
                                         if (sp_BaselineLang.getSelectedItemPosition() > 0 || sp_NumberReco.getSelectedItemPosition() > 0)
                                             EndlineButtonClicked = false;
 
                                         if (!EndlineButtonClicked) {
+                                            // Baseline
                                             testT = 0;
                                             langSpin = sp_BaselineLang.getSelectedItemPosition();
                                             numSpin = sp_NumberReco.getSelectedItemPosition();
+                                            aserDate = btn_DatePicker.getText().toString();
                                             OA = 0;
                                             OS = 0;
                                             OM = 0;
@@ -624,7 +700,7 @@ public class AddStudentProfiles extends AppCompatActivity {
                                         asr.GroupID = GrpID;
                                         asr.ChildID = "";
                                         asr.TestType = testT;
-                                        asr.TestDate = btn_DatePicker.getText().toString();
+                                        asr.TestDate = aserDate;
                                         asr.Lang = langSpin;
                                         asr.Num = numSpin;
                                         asr.CreatedBy = statdb.getValue("CRL");
@@ -655,8 +731,8 @@ public class AddStudentProfiles extends AppCompatActivity {
                                 stdObj.FirstName = edt_Fname.getText().toString();
                                 stdObj.MiddleName = edt_Mname.getText().toString();
                                 stdObj.LastName = edt_Lname.getText().toString();
-                                stdObj.Age = Integer.parseInt(String.valueOf(edt_Age.getText()));
-                                stdObj.Class = Integer.parseInt(String.valueOf(edt_Class.getText()));
+                                stdObj.Age = stdAge;
+                                stdObj.stdClass = Integer.parseInt(String.valueOf(edt_Class.getText()));
                                 stdObj.UpdatedDate = util.GetCurrentDateTime(false);
                                 stdObj.Gender = gender;
                                 stdObj.GroupID = GrpID;
@@ -665,6 +741,7 @@ public class AddStudentProfiles extends AppCompatActivity {
                                 stdObj.StudentUID = "";
                                 stdObj.IsSelected = true;
                                 stdObj.CreatedOn = util.GetCurrentDateTime(false).toString();
+                                stdObj.DOB = btn_BirthDatePicker.getText().toString();
                                 sdb.insertData(stdObj);
 
                                 Toast.makeText(AddStudentProfiles.this, "Record Inserted Successfully !!!", Toast.LENGTH_SHORT).show();
@@ -691,16 +768,28 @@ public class AddStudentProfiles extends AppCompatActivity {
         });
     }
 
+
+    int calculateAge(long date) {
+        Calendar dob = Calendar.getInstance();
+        dob.setTimeInMillis(date);
+        Calendar today = Calendar.getInstance();
+        int age = today.get(Calendar.YEAR) - dob.get(Calendar.YEAR);
+        if (today.get(Calendar.DAY_OF_MONTH) < dob.get(Calendar.DAY_OF_MONTH)) {
+            age--;
+        }
+        return age;
+    }
+
     private void resetFormPartially() {
         edt_Fname.getText().clear();
         edt_Mname.getText().clear();
         edt_Lname.getText().clear();
-        edt_Age.getText().clear();
         edt_Class.getText().clear();
         imgView.setImageDrawable(null);
         UUID uuStdid = UUID.randomUUID();
         randomUUIDStudent = uuStdid.toString();
         EndlineButtonClicked = false;
+        btn_BirthDatePicker.setText("Birth Date");
         btn_DatePicker.setText(util.GetCurrentDate().toString());
         sp_BaselineLang.setSelection(0);
         sp_NumberReco.setSelection(0);
@@ -765,7 +854,6 @@ public class AddStudentProfiles extends AppCompatActivity {
         edt_Fname = (EditText) findViewById(R.id.edt_FirstName);
         edt_Mname = (EditText) findViewById(R.id.edt_MiddleName);
         edt_Lname = (EditText) findViewById(R.id.edt_LastName);
-        edt_Age = (EditText) findViewById(R.id.edt_Age);
         edt_Class = (EditText) findViewById(R.id.edt_Class);
         rg_Gender = (RadioGroup) findViewById(R.id.rg_Gender);
         btn_Capture = (Button) findViewById(R.id.btn_Capture);
@@ -774,6 +862,7 @@ public class AddStudentProfiles extends AppCompatActivity {
         btn_Clear = (Button) findViewById(R.id.btn_Clear);
         util = new Utility();
         btn_DatePicker = findViewById(R.id.btn_DatePicker);
+        btn_BirthDatePicker = findViewById(R.id.btn_BirthDatePicker);
         btn_Endline1 = findViewById(R.id.btn_Endline1);
         btn_Endline2 = findViewById(R.id.btn_Endline2);
         btn_Endline3 = findViewById(R.id.btn_Endline3);
@@ -799,8 +888,19 @@ public class AddStudentProfiles extends AppCompatActivity {
         });
     }
 
+    private void initializeBirthDate() {
+        btn_BirthDatePicker.setPadding(8, 8, 8, 8);
+        btn_BirthDatePicker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogFragment newFragment = new BirthDatePickerFragment();
+                newFragment.show(getFragmentManager(), "BirthDatePicker");
+            }
+        });
+    }
+
     private void initializeNumberRecoSpinner() {
-        String[] NumberRecoAdapter = {"Baseline (Number Recognition)", "Beg", "0-9", "10-99", "100-999"};
+        String[] NumberRecoAdapter = {"Baseline (Number Recognition)", "Beg", "0-9", "10-99", "Sub", "Div"};
         ArrayAdapter<String> recoAdapter = new ArrayAdapter<String>(this, R.layout.custom_spinner, NumberRecoAdapter);
         //sp_NumberReco.setPrompt("Number Reco Level");
         sp_NumberReco.setAdapter(recoAdapter);
@@ -923,11 +1023,11 @@ public class AddStudentProfiles extends AppCompatActivity {
         edt_Fname.getText().clear();
         edt_Mname.getText().clear();
         edt_Lname.getText().clear();
-        edt_Age.getText().clear();
         edt_Class.getText().clear();
         sp_BaselineLang.setSelection(0);
         sp_NumberReco.setSelection(0);
         btn_DatePicker.setText(util.GetCurrentDate().toString());
+        btn_BirthDatePicker.setText("Birth Date");
         imgView.setImageDrawable(null);
         EndlineButtonClicked = false;
         setDefaults();

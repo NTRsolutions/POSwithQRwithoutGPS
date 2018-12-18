@@ -329,7 +329,7 @@ public class FileUtil {
         return !file.exists();
     }
 
-//    private static boolean rename(File f, String name, boolean root) throws RootNotPermittedException {
+//    public static boolean rename(File f, String name, boolean root) throws RootNotPermittedException {
 //        String newPath = f.getParent() + "/" + name;
 //        if (f.getParentFile().canWrite()) {
 //            return f.renameTo(new File(newPath));
@@ -448,7 +448,7 @@ public class FileUtil {
      * @param file The folder name.
      * @return true if successful.
      */
-    private static boolean rmdir1(final File file, Context context) {
+    public static boolean rmdir1(final File file, Context context) {
         if (file == null)
             return false;
         boolean b = true;
@@ -462,7 +462,7 @@ public class FileUtil {
         return b;
     }
 
-    private static boolean rmdir(final File file, Context context) {
+    public static boolean rmdir(final File file, Context context) {
         if (file == null)
             return false;
         if (!file.exists()) {
@@ -513,7 +513,7 @@ public class FileUtil {
      * @param folder the folder
      * @return true if successful.
      */
-    private static final boolean deleteFilesInFolder(final File folder, Context context) {
+    public static final boolean deleteFilesInFolder(final File folder, Context context) {
         boolean totalSuccess = true;
         if (folder == null)
             return false;
@@ -635,7 +635,7 @@ public class FileUtil {
      * @return A list of external SD card paths.
      */
     @TargetApi(Build.VERSION_CODES.KITKAT)
-    private static String[] getExtSdCardPaths(Context context) {
+    public static String[] getExtSdCardPaths(Context context) {
         List<String> paths = new ArrayList<>();
         for (File file : context.getExternalFilesDirs("external")) {
             if (file != null && !file.equals(context.getExternalFilesDir("external"))) {
@@ -771,7 +771,7 @@ public class FileUtil {
     // Utility methods for Kitkat
 
     /**
-     * Copy a resource file into a private target directory, if the target does not yet exist. Required for the Kitkat
+     * Copy a resource file into a public target directory, if the target does not yet exist. Required for the Kitkat
      * workaround.
      *
      * @param resource   The resource file.
@@ -780,7 +780,7 @@ public class FileUtil {
      * @return the dummy file.
      * @throws IOException
      */
-    private static File copyDummyFile(final int resource, final String folderName, final String targetName, Context context)
+    public static File copyDummyFile(final int resource, final String folderName, final String targetName, Context context)
             throws IOException {
         File externalFilesDir = context.getExternalFilesDir(folderName);
         if (externalFilesDir == null) {
@@ -859,11 +859,11 @@ public class FileUtil {
     }*/
 
     /**
-     * Copy the dummy image and dummy mp3 into the private folder, if not yet there. Required for the Kitkat workaround.
+     * Copy the dummy image and dummy mp3 into the public folder, if not yet there. Required for the Kitkat workaround.
      *
      * @return the dummy mp3.
      */
-    /*private static File copyDummyFiles(Context c) {
+    /*public static File copyDummyFiles(Context c) {
         try {
             copyDummyFile(R.mipmap.ic_launcher, "mkdirFiles", "albumart.jpg", c);
             return copyDummyFile(R.raw.temptrack, "mkdirFiles", "correct.mp3", c);
@@ -875,11 +875,11 @@ public class FileUtil {
     }
 */
     static class MediaFile {
-        private static final String NO_MEDIA = ".nomedia";
-        private static final String ALBUM_ART_URI = "content://media/external/audio/albumart";
-        private static final String[] ALBUM_PROJECTION = {BaseColumns._ID, MediaStore.Audio.AlbumColumns.ALBUM_ID, "media_type"};
+        public static final String NO_MEDIA = ".nomedia";
+        public static final String ALBUM_ART_URI = "content://media/external/audio/albumart";
+        public static final String[] ALBUM_PROJECTION = {BaseColumns._ID, MediaStore.Audio.AlbumColumns.ALBUM_ID, "media_type"};
 
-        private static File getExternalFilesDir(Context context) {
+        public static File getExternalFilesDir(Context context) {
 
 
             try {
@@ -904,9 +904,9 @@ public class FileUtil {
         }
 
 
-        private final File file;
-        private final Context context;
-        private final ContentResolver contentResolver;
+        public final File file;
+        public final Context context;
+        public final ContentResolver contentResolver;
         Uri filesUri;
 
         MediaFile(Context context, File file) {
@@ -960,7 +960,7 @@ public class FileUtil {
             return file;
         }
 
-        private int getTemporaryAlbumId() {
+        public int getTemporaryAlbumId() {
             final File temporaryTrack;
             try {
                 temporaryTrack = installTemporaryTrack();
@@ -1027,7 +1027,7 @@ public class FileUtil {
             }
         }
 
-        private File installTemporaryTrack()
+        public File installTemporaryTrack()
                 throws IOException {
             File externalFilesDir = getExternalFilesDir(context);
             if (externalFilesDir == null) {

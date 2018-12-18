@@ -649,6 +649,7 @@ public class SyncActivity extends AppCompatActivity {
                         _obj.put("StartDateTime", _score.StartTime);
                         _obj.put("EndDateTime", _score.EndTime);
                         _obj.put("Level", _score.Level);
+                        _obj.put("Label", _score.Label);
                         scoreData.put(_obj);
                     } catch (JSONException e) {
                         e.printStackTrace();
@@ -690,7 +691,8 @@ public class SyncActivity extends AppCompatActivity {
                                 studentObj.put("MiddleName",studentsList.get(i).MiddleName);
                                 studentObj.put("LastName",studentsList.get(i).LastName);
                                 studentObj.put("Age",studentsList.get(i).Age);
-                                studentObj.put("Class",studentsList.get(i).Class);
+                                studentObj.put("DOB",studentsList.get(i).DOB);
+                                studentObj.put("Class",studentsList.get(i).stdClass);
                                 studentObj.put("UpdatedDate",studentsList.get(i).UpdatedDate);
                                 studentObj.put("Gender",studentsList.get(i).Gender);
                                 studentObj.put("GroupID",studentsList.get(i).GroupID);
@@ -964,7 +966,7 @@ public class SyncActivity extends AppCompatActivity {
             stdObj.MiddleName = stdJsonObject.getString("MiddleName");
             stdObj.LastName = stdJsonObject.getString("LastName");
             stdObj.Age = stdJsonObject.getInt("Age");
-            stdObj.Class = stdJsonObject.getInt("Class");
+            stdObj.stdClass = stdJsonObject.getInt("Class");
             stdObj.UpdatedDate = stdJsonObject.getString("UpdatedDate");
             stdObj.Gender = stdJsonObject.getString("Gender");
             stdObj.GroupID = stdJsonObject.getString("GroupID");

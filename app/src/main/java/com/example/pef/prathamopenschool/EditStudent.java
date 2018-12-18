@@ -25,6 +25,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.util.List;
@@ -62,7 +65,7 @@ public class EditStudent extends AppCompatActivity {
     StatusDBHelper statdb;
 
     Spinner sp_BaselineLang, sp_NumberReco;
-    Button btn_DatePicker, btn_Endline1, btn_Endline2, btn_Endline3, btn_Endline4;
+    Button btn_EndlineDatePicker, btn_DatePicker, btn_Endline1, btn_Endline2, btn_Endline3, btn_Endline4;
     LinearLayout AserForm;
     public boolean EndlineButtonClicked = false;
 
@@ -79,12 +82,22 @@ public class EditStudent extends AppCompatActivity {
     List<Aser> AserData;
     AserDBHelper adb;
     private boolean captureButtonPressed = false;
+    String aserDate;
+
+    @Subscribe
+    public void onEvent(String msg) {
+        if (!msg.isEmpty()) {
+            btn_EndlineDatePicker.setText(msg);
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_student);
         getSupportActionBar().hide();
+
+        EventBus.getDefault().register(EditStudent.this);
 
         initializeVariables();
         populateStatesSpinner();
@@ -115,6 +128,16 @@ public class EditStudent extends AppCompatActivity {
                 CheckBox WordAdd = endlineDialog.findViewById(R.id.WordAdd);
                 CheckBox WordSub = endlineDialog.findViewById(R.id.WordSub);
                 Button btn_Submit = endlineDialog.findViewById(R.id.btn_Submit);
+                btn_EndlineDatePicker = endlineDialog.findViewById(R.id.btn_EndlineDatePicker);
+                btn_EndlineDatePicker.setText(Util.GetCurrentDate().toString());
+                btn_EndlineDatePicker.setPadding(8, 8, 8, 8);
+                btn_EndlineDatePicker.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        DialogFragment newFragment = new DatePickerFragment();
+                        newFragment.show(getFragmentManager(), "EndlineDatePicker");
+                    }
+                });
 
                 // set values of endline
                 title.setText("Endline 1");
@@ -123,7 +146,7 @@ public class EditStudent extends AppCompatActivity {
                 ArrayAdapter<String> baselineAdapter = new ArrayAdapter<String>(EditStudent.this, R.layout.custom_spinner, baselineLangAdapter);
                 spinner_BaselineLang.setAdapter(baselineAdapter);
 
-                String[] NumberRecoAdapter = {"Number Recognition", "Beg", "0-9", "10-99", "100-999"};
+                String[] NumberRecoAdapter = {"Number Recognition", "Beg", "0-9", "10-99", "Sub", "Div"};
                 ArrayAdapter<String> recoAdapter = new ArrayAdapter<String>(EditStudent.this, R.layout.custom_spinner, NumberRecoAdapter);
                 spinner_NumberReco.setAdapter(recoAdapter);
 
@@ -136,6 +159,7 @@ public class EditStudent extends AppCompatActivity {
                 if (AserData == null || AserData.size() == 0) {
                     setDefaults();
                     testT = 1;
+                    btn_EndlineDatePicker.setText(Util.GetCurrentDate().toString());
                     spinner_BaselineLang.setSelection(0);
                     spinner_NumberReco.setSelection(0);
                 } else {
@@ -143,7 +167,7 @@ public class EditStudent extends AppCompatActivity {
                     testT = AserData.get(0).TestType;
                     langSpin = AserData.get(0).Lang;
                     numSpin = AserData.get(0).Num;
-                    AserTestDate = AserData.get(0).TestDate;
+                    aserDate = AserData.get(0).TestDate;
                     OA = AserData.get(0).OAdd;
                     OS = AserData.get(0).OSub;
                     OM = AserData.get(0).OMul;
@@ -152,10 +176,10 @@ public class EditStudent extends AppCompatActivity {
                     WS = AserData.get(0).WSub;
                     IC = AserData.get(0).FLAG;
 
+                    btn_EndlineDatePicker.setText(aserDate);
                     // set baseline aser
                     spinner_BaselineLang.setSelection(langSpin);
                     spinner_NumberReco.setSelection(numSpin);
-                    btn_DatePicker.setText(AserTestDate);
 
                     if (OA == 1) {
                         OprAdd.setChecked(true);
@@ -243,7 +267,7 @@ public class EditStudent extends AppCompatActivity {
                             sp_BaselineLang.setSelection(0);
                             sp_NumberReco.setSelection(0);
                             EndlineButtonClicked = true;
-
+                            aserDate = btn_EndlineDatePicker.getText().toString();
                             testT = 1;
                             langSpin = BaselineSpinnerValue;
                             numSpin = NumberSpinnerValue;
@@ -260,7 +284,7 @@ public class EditStudent extends AppCompatActivity {
                             result = adb.CheckDataExists(StudentUniqID, testT);
                             if (result) {
                                 //update
-                                adb.UpdateAserData("", AserTestDate, langSpin, numSpin, OA, OS, OM, OD, WA, WS, statdb.getValue("CRL"), Util.GetCurrentDate(), IC, StudentUniqID, testT);
+                                adb.UpdateAserData("", aserDate, langSpin, numSpin, OA, OS, OM, OD, WA, WS, statdb.getValue("CRL"), Util.GetCurrentDate(), IC, StudentUniqID, testT);
                             } else {
                                 // new entry
                                 Aser asr = new Aser();
@@ -268,7 +292,7 @@ public class EditStudent extends AppCompatActivity {
                                 asr.GroupID = GrpID;
                                 asr.ChildID = "";
                                 asr.TestType = testT;
-                                asr.TestDate = AserTestDate;
+                                asr.TestDate = aserDate;
                                 asr.Lang = langSpin;
                                 asr.Num = numSpin;
                                 asr.CreatedBy = statdb.getValue("CRL");
@@ -289,7 +313,8 @@ public class EditStudent extends AppCompatActivity {
                             Toast.makeText(EditStudent.this, "Endline 1 Updated !", Toast.LENGTH_SHORT).show();
 
                             if (endlineDialog.isShowing())
-                                endlineDialog.dismiss();
+                                endlineDialog.cancel();
+
                         } else {
                             Toast.makeText(EditStudent.this, "Please fill all the fields !!!", Toast.LENGTH_SHORT).show();
                         }
@@ -352,6 +377,16 @@ public class EditStudent extends AppCompatActivity {
                 CheckBox WordAdd = endlineDialog.findViewById(R.id.WordAdd);
                 CheckBox WordSub = endlineDialog.findViewById(R.id.WordSub);
                 Button btn_Submit = endlineDialog.findViewById(R.id.btn_Submit);
+                btn_EndlineDatePicker = endlineDialog.findViewById(R.id.btn_EndlineDatePicker);
+                btn_EndlineDatePicker.setText(Util.GetCurrentDate().toString());
+                btn_EndlineDatePicker.setPadding(8, 8, 8, 8);
+                btn_EndlineDatePicker.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        DialogFragment newFragment = new DatePickerFragment();
+                        newFragment.show(getFragmentManager(), "EndlineDatePicker");
+                    }
+                });
 
                 // set values of endline
                 title.setText("Endline 2");
@@ -360,7 +395,7 @@ public class EditStudent extends AppCompatActivity {
                 ArrayAdapter<String> baselineAdapter = new ArrayAdapter<String>(EditStudent.this, R.layout.custom_spinner, baselineLangAdapter);
                 spinner_BaselineLang.setAdapter(baselineAdapter);
 
-                String[] NumberRecoAdapter = {"Number Recognition", "Beg", "0-9", "10-99", "100-999"};
+                String[] NumberRecoAdapter = {"Number Recognition", "Beg", "0-9", "10-99", "Sub", "Div"};
                 ArrayAdapter<String> recoAdapter = new ArrayAdapter<String>(EditStudent.this, R.layout.custom_spinner, NumberRecoAdapter);
                 spinner_NumberReco.setAdapter(recoAdapter);
 
@@ -373,6 +408,7 @@ public class EditStudent extends AppCompatActivity {
                 if (AserData == null || AserData.size() == 0) {
                     setDefaults();
                     testT = 2;
+                    btn_EndlineDatePicker.setText(Util.GetCurrentDate().toString());
                     spinner_BaselineLang.setSelection(0);
                     spinner_NumberReco.setSelection(0);
                 } else {
@@ -380,7 +416,7 @@ public class EditStudent extends AppCompatActivity {
                     testT = AserData.get(0).TestType;
                     langSpin = AserData.get(0).Lang;
                     numSpin = AserData.get(0).Num;
-                    AserTestDate = AserData.get(0).TestDate;
+                    aserDate = AserData.get(0).TestDate;
                     OA = AserData.get(0).OAdd;
                     OS = AserData.get(0).OSub;
                     OM = AserData.get(0).OMul;
@@ -389,10 +425,10 @@ public class EditStudent extends AppCompatActivity {
                     WS = AserData.get(0).WSub;
                     IC = AserData.get(0).FLAG;
 
+                    btn_EndlineDatePicker.setText(aserDate);
                     // set baseline aser
                     spinner_BaselineLang.setSelection(langSpin);
                     spinner_NumberReco.setSelection(numSpin);
-                    btn_DatePicker.setText(AserTestDate);
 
                     if (OA == 1) {
                         OprAdd.setChecked(true);
@@ -480,6 +516,7 @@ public class EditStudent extends AppCompatActivity {
                             sp_BaselineLang.setSelection(0);
                             sp_NumberReco.setSelection(0);
                             EndlineButtonClicked = true;
+                            aserDate = btn_EndlineDatePicker.getText().toString();
 
                             testT = 2;
                             langSpin = BaselineSpinnerValue;
@@ -497,7 +534,7 @@ public class EditStudent extends AppCompatActivity {
                             result = adb.CheckDataExists(StudentUniqID, testT);
                             if (result) {
                                 //update
-                                adb.UpdateAserData("", AserTestDate, langSpin, numSpin, OA, OS, OM, OD, WA, WS, statdb.getValue("CRL"), Util.GetCurrentDate(), IC, StudentUniqID, testT);
+                                adb.UpdateAserData("", aserDate, langSpin, numSpin, OA, OS, OM, OD, WA, WS, statdb.getValue("CRL"), Util.GetCurrentDate(), IC, StudentUniqID, testT);
                             } else {
                                 // new entry
                                 Aser asr = new Aser();
@@ -505,7 +542,7 @@ public class EditStudent extends AppCompatActivity {
                                 asr.GroupID = GrpID;
                                 asr.ChildID = "";
                                 asr.TestType = testT;
-                                asr.TestDate = AserTestDate;
+                                asr.TestDate = aserDate;
                                 asr.Lang = langSpin;
                                 asr.Num = numSpin;
                                 asr.CreatedBy = statdb.getValue("CRL");
@@ -525,7 +562,7 @@ public class EditStudent extends AppCompatActivity {
                             Toast.makeText(EditStudent.this, "Endline 2 Updated !", Toast.LENGTH_SHORT).show();
 
                             if (endlineDialog.isShowing())
-                                endlineDialog.dismiss();
+                                endlineDialog.cancel();
                         } else {
                             Toast.makeText(EditStudent.this, "Please fill all the fields !!!", Toast.LENGTH_SHORT).show();
                         }
@@ -588,6 +625,16 @@ public class EditStudent extends AppCompatActivity {
                 CheckBox WordAdd = endlineDialog.findViewById(R.id.WordAdd);
                 CheckBox WordSub = endlineDialog.findViewById(R.id.WordSub);
                 Button btn_Submit = endlineDialog.findViewById(R.id.btn_Submit);
+                btn_EndlineDatePicker = endlineDialog.findViewById(R.id.btn_EndlineDatePicker);
+                btn_EndlineDatePicker.setText(Util.GetCurrentDate().toString());
+                btn_EndlineDatePicker.setPadding(8, 8, 8, 8);
+                btn_EndlineDatePicker.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        DialogFragment newFragment = new DatePickerFragment();
+                        newFragment.show(getFragmentManager(), "EndlineDatePicker");
+                    }
+                });
 
                 // set values of endline
                 title.setText("Endline 3");
@@ -596,7 +643,7 @@ public class EditStudent extends AppCompatActivity {
                 ArrayAdapter<String> baselineAdapter = new ArrayAdapter<String>(EditStudent.this, R.layout.custom_spinner, baselineLangAdapter);
                 spinner_BaselineLang.setAdapter(baselineAdapter);
 
-                String[] NumberRecoAdapter = {"Number Recognition", "Beg", "0-9", "10-99", "100-999"};
+                String[] NumberRecoAdapter = {"Number Recognition", "Beg", "0-9", "10-99", "Sub", "Div"};
                 ArrayAdapter<String> recoAdapter = new ArrayAdapter<String>(EditStudent.this, R.layout.custom_spinner, NumberRecoAdapter);
                 spinner_NumberReco.setAdapter(recoAdapter);
 
@@ -609,6 +656,7 @@ public class EditStudent extends AppCompatActivity {
                 if (AserData == null || AserData.size() == 0) {
                     setDefaults();
                     testT = 3;
+                    btn_EndlineDatePicker.setText(Util.GetCurrentDate().toString());
                     spinner_BaselineLang.setSelection(0);
                     spinner_NumberReco.setSelection(0);
                 } else {
@@ -616,7 +664,7 @@ public class EditStudent extends AppCompatActivity {
                     testT = AserData.get(0).TestType;
                     langSpin = AserData.get(0).Lang;
                     numSpin = AserData.get(0).Num;
-                    AserTestDate = AserData.get(0).TestDate;
+                    aserDate = AserData.get(0).TestDate;
                     OA = AserData.get(0).OAdd;
                     OS = AserData.get(0).OSub;
                     OM = AserData.get(0).OMul;
@@ -625,10 +673,10 @@ public class EditStudent extends AppCompatActivity {
                     WS = AserData.get(0).WSub;
                     IC = AserData.get(0).FLAG;
 
+                    btn_EndlineDatePicker.setText(aserDate);
                     // set baseline aser
                     spinner_BaselineLang.setSelection(langSpin);
                     spinner_NumberReco.setSelection(numSpin);
-                    btn_DatePicker.setText(AserTestDate);
 
                     if (OA == 1) {
                         OprAdd.setChecked(true);
@@ -720,6 +768,7 @@ public class EditStudent extends AppCompatActivity {
                             testT = 3;
                             langSpin = BaselineSpinnerValue;
                             numSpin = NumberSpinnerValue;
+                            aserDate = btn_EndlineDatePicker.getText().toString();
 
                             OA = OprAdd.isChecked() ? 1 : 0;
                             OS = OprSub.isChecked() ? 1 : 0;
@@ -733,7 +782,7 @@ public class EditStudent extends AppCompatActivity {
                             result = adb.CheckDataExists(StudentUniqID, testT);
                             if (result) {
                                 //update
-                                adb.UpdateAserData("", AserTestDate, langSpin, numSpin, OA, OS, OM, OD, WA, WS, statdb.getValue("CRL"), Util.GetCurrentDate(), IC, StudentUniqID, testT);
+                                adb.UpdateAserData("", aserDate, langSpin, numSpin, OA, OS, OM, OD, WA, WS, statdb.getValue("CRL"), Util.GetCurrentDate(), IC, StudentUniqID, testT);
                             } else {
                                 // new entry
                                 Aser asr = new Aser();
@@ -741,7 +790,7 @@ public class EditStudent extends AppCompatActivity {
                                 asr.GroupID = GrpID;
                                 asr.ChildID = "";
                                 asr.TestType = testT;
-                                asr.TestDate = AserTestDate;
+                                asr.TestDate = aserDate;
                                 asr.Lang = langSpin;
                                 asr.Num = numSpin;
                                 asr.CreatedBy = statdb.getValue("CRL");
@@ -761,7 +810,7 @@ public class EditStudent extends AppCompatActivity {
                             Toast.makeText(EditStudent.this, "Endline 3 Updated !", Toast.LENGTH_SHORT).show();
 
                             if (endlineDialog.isShowing())
-                                endlineDialog.dismiss();
+                                endlineDialog.cancel();
                         } else {
                             Toast.makeText(EditStudent.this, "Please fill all the fields !!!", Toast.LENGTH_SHORT).show();
                         }
@@ -824,6 +873,16 @@ public class EditStudent extends AppCompatActivity {
                 CheckBox WordAdd = endlineDialog.findViewById(R.id.WordAdd);
                 CheckBox WordSub = endlineDialog.findViewById(R.id.WordSub);
                 Button btn_Submit = endlineDialog.findViewById(R.id.btn_Submit);
+                btn_EndlineDatePicker = endlineDialog.findViewById(R.id.btn_EndlineDatePicker);
+                btn_EndlineDatePicker.setText(Util.GetCurrentDate().toString());
+                btn_EndlineDatePicker.setPadding(8, 8, 8, 8);
+                btn_EndlineDatePicker.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        DialogFragment newFragment = new DatePickerFragment();
+                        newFragment.show(getFragmentManager(), "EndlineDatePicker");
+                    }
+                });
 
                 // set values of endline
                 title.setText("Endline 4");
@@ -832,7 +891,7 @@ public class EditStudent extends AppCompatActivity {
                 ArrayAdapter<String> baselineAdapter = new ArrayAdapter<String>(EditStudent.this, R.layout.custom_spinner, baselineLangAdapter);
                 spinner_BaselineLang.setAdapter(baselineAdapter);
 
-                String[] NumberRecoAdapter = {"Number Recognition", "Beg", "0-9", "10-99", "100-999"};
+                String[] NumberRecoAdapter = {"Number Recognition", "Beg", "0-9", "10-99", "Sub", "Div"};
                 ArrayAdapter<String> recoAdapter = new ArrayAdapter<String>(EditStudent.this, R.layout.custom_spinner, NumberRecoAdapter);
                 spinner_NumberReco.setAdapter(recoAdapter);
 
@@ -845,6 +904,7 @@ public class EditStudent extends AppCompatActivity {
                 if (AserData == null || AserData.size() == 0) {
                     setDefaults();
                     testT = 4;
+                    btn_EndlineDatePicker.setText(Util.GetCurrentDate().toString());
                     spinner_BaselineLang.setSelection(0);
                     spinner_NumberReco.setSelection(0);
                 } else {
@@ -852,7 +912,7 @@ public class EditStudent extends AppCompatActivity {
                     testT = AserData.get(0).TestType;
                     langSpin = AserData.get(0).Lang;
                     numSpin = AserData.get(0).Num;
-                    AserTestDate = AserData.get(0).TestDate;
+                    aserDate = AserData.get(0).TestDate;
                     OA = AserData.get(0).OAdd;
                     OS = AserData.get(0).OSub;
                     OM = AserData.get(0).OMul;
@@ -861,10 +921,10 @@ public class EditStudent extends AppCompatActivity {
                     WS = AserData.get(0).WSub;
                     IC = AserData.get(0).FLAG;
 
+                    btn_EndlineDatePicker.setText(aserDate);
                     // set baseline aser
                     spinner_BaselineLang.setSelection(langSpin);
                     spinner_NumberReco.setSelection(numSpin);
-                    btn_DatePicker.setText(AserTestDate);
 
                     if (OA == 1) {
                         OprAdd.setChecked(true);
@@ -952,6 +1012,7 @@ public class EditStudent extends AppCompatActivity {
                             sp_BaselineLang.setSelection(0);
                             sp_NumberReco.setSelection(0);
                             EndlineButtonClicked = true;
+                            aserDate = btn_EndlineDatePicker.getText().toString();
 
                             testT = 4;
                             langSpin = BaselineSpinnerValue;
@@ -969,7 +1030,7 @@ public class EditStudent extends AppCompatActivity {
                             result = adb.CheckDataExists(StudentUniqID, testT);
                             if (result) {
                                 //update
-                                adb.UpdateAserData("", AserTestDate, langSpin, numSpin, OA, OS, OM, OD, WA, WS, statdb.getValue("CRL"), Util.GetCurrentDate(), IC, StudentUniqID, testT);
+                                adb.UpdateAserData("", aserDate, langSpin, numSpin, OA, OS, OM, OD, WA, WS, statdb.getValue("CRL"), Util.GetCurrentDate(), IC, StudentUniqID, testT);
                             } else {
                                 // new entry
                                 Aser asr = new Aser();
@@ -977,7 +1038,7 @@ public class EditStudent extends AppCompatActivity {
                                 asr.GroupID = GrpID;
                                 asr.ChildID = "";
                                 asr.TestType = testT;
-                                asr.TestDate = AserTestDate;
+                                asr.TestDate = aserDate;
                                 asr.Lang = langSpin;
                                 asr.Num = numSpin;
                                 asr.CreatedBy = statdb.getValue("CRL");
@@ -997,7 +1058,7 @@ public class EditStudent extends AppCompatActivity {
                             Toast.makeText(EditStudent.this, "Endline 4 Updated !", Toast.LENGTH_SHORT).show();
 
                             if (endlineDialog.isShowing())
-                                endlineDialog.dismiss();
+                                endlineDialog.cancel();
                         } else {
                             Toast.makeText(EditStudent.this, "Please fill all the fields !!!", Toast.LENGTH_SHORT).show();
                         }
@@ -1058,6 +1119,7 @@ public class EditStudent extends AppCompatActivity {
                         testT = 0;
                         langSpin = sp_BaselineLang.getSelectedItemPosition();
                         numSpin = sp_NumberReco.getSelectedItemPosition();
+                        AserTestDate = btn_DatePicker.getText().toString();
 
                         if (langSpin > 0 && numSpin > 0) {
                             // insert or update baseline in db
@@ -1118,17 +1180,15 @@ public class EditStudent extends AppCompatActivity {
         btn_DatePicker.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 DialogFragment newFragment = new DatePickerFragment();
                 newFragment.show(getFragmentManager(), "DatePicker");
-
             }
         });
     }
 
     private void initializeNumberRecoSpinner() {
         sp_NumberReco = findViewById(R.id.spinner_NumberReco);
-        String[] NumberRecoAdapter = {"Baseline (Number Recognition)", "Beg", "0-9", "10-99", "100-999"};
+        String[] NumberRecoAdapter = {"Baseline (Number Recognition)", "Beg", "0-9", "10-99", "Sub", "Div"};
         ArrayAdapter<String> recoAdapter = new ArrayAdapter<String>(this, R.layout.custom_spinner, NumberRecoAdapter);
         //sp_NumberReco.setPrompt("Number Reco Level");
         sp_NumberReco.setAdapter(recoAdapter);
@@ -1351,9 +1411,9 @@ public class EditStudent extends AppCompatActivity {
                 // Default
                 Gender = "Male";
             }
-            String cls = String.valueOf(SelectedStudent.Class);
+            String cls = String.valueOf(SelectedStudent.stdClass);
             if (cls.length() > 0) {
-                Class = SelectedStudent.Class;
+                Class = SelectedStudent.stdClass;
             } else {
                 Class = 0;
             }

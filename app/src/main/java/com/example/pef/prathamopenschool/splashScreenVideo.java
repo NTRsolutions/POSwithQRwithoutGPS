@@ -313,7 +313,7 @@ public class splashScreenVideo extends AppCompatActivity {
                     String ver = statusDBHelper.getValue("apkVersion");
                     if (ver == null || ver.equalsIgnoreCase("null")) {
                         createDBJsonforBackup();
-                    } else if (!ver.equalsIgnoreCase("2.1.7") && !ver.equalsIgnoreCase("2.1.8") && !ver.equalsIgnoreCase("2.1.9") && !ver.equalsIgnoreCase("2.1.10") && !ver.equalsIgnoreCase("2.1.11") && !ver.equalsIgnoreCase("2.1.12") && !ver.equalsIgnoreCase("2.1.13") && !ver.equalsIgnoreCase("2.1.14") && !ver.equalsIgnoreCase("2.1.15") && !ver.equalsIgnoreCase("2.1.16") && !ver.equalsIgnoreCase("2.1.17") && !ver.equalsIgnoreCase("2.1.18")) {
+                    } else if (!ver.equalsIgnoreCase("2.1.7") && !ver.equalsIgnoreCase("2.1.8") && !ver.equalsIgnoreCase("2.1.9") && !ver.equalsIgnoreCase("2.1.10") && !ver.equalsIgnoreCase("2.1.11") && !ver.equalsIgnoreCase("2.1.12") && !ver.equalsIgnoreCase("2.1.13") && !ver.equalsIgnoreCase("2.1.14") && !ver.equalsIgnoreCase("2.1.15") && !ver.equalsIgnoreCase("2.1.16") && !ver.equalsIgnoreCase("2.1.17") && !ver.equalsIgnoreCase("2.1.18") && !ver.equalsIgnoreCase("2.1.19") && !ver.equalsIgnoreCase("2.2.1")) {
                         createDBJsonforBackup();
                     }
                     //check initial entries
@@ -329,7 +329,7 @@ public class splashScreenVideo extends AppCompatActivity {
                     String ver = statusDBHelper.getValue("apkVersion");
                     if (ver == null || ver.equalsIgnoreCase("null")) {
                         createDBJsonforBackup();
-                    } else if (!ver.equalsIgnoreCase("2.1.7") && !ver.equalsIgnoreCase("2.1.8") && !ver.equalsIgnoreCase("2.1.9") && !ver.equalsIgnoreCase("2.1.10") && !ver.equalsIgnoreCase("2.1.11") && !ver.equalsIgnoreCase("2.1.12") && !ver.equalsIgnoreCase("2.1.13") && !ver.equalsIgnoreCase("2.1.14") && !ver.equalsIgnoreCase("2.1.15") && !ver.equalsIgnoreCase("2.1.16") && !ver.equalsIgnoreCase("2.1.17") && !ver.equalsIgnoreCase("2.1.18")) {
+                    } else if (!ver.equalsIgnoreCase("2.1.7") && !ver.equalsIgnoreCase("2.1.8") && !ver.equalsIgnoreCase("2.1.9") && !ver.equalsIgnoreCase("2.1.10") && !ver.equalsIgnoreCase("2.1.11") && !ver.equalsIgnoreCase("2.1.12") && !ver.equalsIgnoreCase("2.1.13") && !ver.equalsIgnoreCase("2.1.14") && !ver.equalsIgnoreCase("2.1.15") && !ver.equalsIgnoreCase("2.1.16") && !ver.equalsIgnoreCase("2.1.17") && !ver.equalsIgnoreCase("2.1.18") && !ver.equalsIgnoreCase("2.1.19") && !ver.equalsIgnoreCase("2.2.1")) {
                         createDBJsonforBackup();
                     }
                     //check initial entries
@@ -629,7 +629,7 @@ public class splashScreenVideo extends AppCompatActivity {
         }
         if (apkType == false) {
             s = new StatusDBHelper(this);
-            s.insertInitialData("apkType", "QRCode, NonGPS, Shuffled Content");
+            s.insertInitialData("apkType", "QRCode, NonGPS, Shuffled Content"); // shuffled or regular
         } else {
             s = new StatusDBHelper(this);
             s.Update("apkType", "QRCode, NonGPS, Shuffled Content");
@@ -1361,6 +1361,7 @@ public class splashScreenVideo extends AppCompatActivity {
                         _obj.put("StartDateTime", _score.StartTime);
                         _obj.put("EndDateTime", _score.EndTime);
                         _obj.put("Level", _score.Level);
+                        _obj.put("Label", _score.Label);
                         scoreData.put(_obj);
                     }
                 }
@@ -1453,7 +1454,7 @@ public class splashScreenVideo extends AppCompatActivity {
                         studentObj.put("MiddleName", studentsList.get(i).MiddleName);
                         studentObj.put("LastName", studentsList.get(i).LastName);
                         studentObj.put("Age", studentsList.get(i).Age);
-                        studentObj.put("Class", studentsList.get(i).Class);
+                        studentObj.put("Class", studentsList.get(i).stdClass);
                         studentObj.put("UpdatedDate", studentsList.get(i).UpdatedDate);
                         studentObj.put("Gender", studentsList.get(i).Gender);
                         studentObj.put("GroupID", studentsList.get(i).GroupID);
@@ -1461,6 +1462,7 @@ public class splashScreenVideo extends AppCompatActivity {
                         studentObj.put("newStudent", studentsList.get(i).newStudent); // DO THE CHANGES for HANDLING NULLS
                         studentObj.put("StudentUID", studentsList.get(i).StudentUID == null ? "" : studentsList.get(i).StudentUID);
                         studentObj.put("IsSelected", studentsList.get(i).IsSelected == null ? false : !studentsList.get(i).IsSelected);
+                        studentObj.put("DOB", studentsList.get(i).DOB);
                         // new entries
                         studentObj.put("sharedBy", studentsList.get(i).sharedBy == null ? "" : studentsList.get(i).sharedBy);
                         studentObj.put("SharedAtDateTime", studentsList.get(i).SharedAtDateTime == null ? "" : studentsList.get(i).SharedAtDateTime);

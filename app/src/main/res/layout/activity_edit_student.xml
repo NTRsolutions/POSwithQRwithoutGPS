@@ -42,7 +42,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginLeft="8dp"
                 android:layout_weight="1"
-                android:background="@drawable/custom_border"
+                android:background="@drawable/spinner_background"
                 android:textAlignment="center" />
 
             <!--Select Block Drop Down List-->
@@ -54,7 +54,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginLeft="16dp"
                 android:layout_weight="1"
-                android:background="@drawable/custom_border"
+                android:background="@drawable/spinner_background"
                 android:textAlignment="center" />
 
             <!--Village Drop Down List-->
@@ -66,7 +66,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginLeft="16dp"
                 android:layout_weight="1"
-                android:background="@drawable/custom_border"
+                android:background="@drawable/spinner_background"
                 android:textAlignment="center" />
 
         </LinearLayout>
@@ -88,7 +88,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginLeft="8dp"
                 android:layout_weight="1"
-                android:background="@drawable/custom_border"
+                android:background="@drawable/spinner_background"
                 android:textAlignment="center" />
 
             <!--For Editing Existing Student-->
@@ -100,7 +100,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginLeft="16dp"
                 android:layout_weight="1"
-                android:background="@drawable/custom_border"
+                android:background="@drawable/spinner_background"
                 android:textAlignment="center" />
 
         </LinearLayout>
@@ -177,7 +177,7 @@
 
             </LinearLayout>
 
-            <!--Age, Class, Gender-->
+            <!--Age, stdClass, Gender-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -288,7 +288,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
                     android:layout_weight="1"
-                    android:background="@drawable/custom_border" />
+                    android:background="@drawable/spinner_background" />
 
                 <!--Number Reco-->
                 <Spinner
@@ -298,7 +298,7 @@
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
                     android:layout_weight="1"
-                    android:background="@drawable/custom_border" />
+                    android:background="@drawable/spinner_background" />
 
             </LinearLayout>
 

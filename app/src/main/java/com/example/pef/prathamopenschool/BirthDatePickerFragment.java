@@ -11,7 +11,7 @@ import org.greenrobot.eventbus.EventBus;
 
 import java.util.Calendar;
 
-public class DatePickerFragment extends DialogFragment implements DatePickerDialog.OnDateSetListener {
+public class BirthDatePickerFragment extends DialogFragment implements DatePickerDialog.OnDateSetListener {
 
     int year;
     int month;
@@ -40,7 +40,7 @@ public class DatePickerFragment extends DialogFragment implements DatePickerDial
         this.month = monthofyear + 1;
         this.day = dayOfMonth;
 
-        Button btn = (Button) getActivity().findViewById(R.id.btn_DatePicker);
+        Button btn = (Button) getActivity().findViewById(R.id.btn_BirthDatePicker);
 
         if (this.month < 10 && this.day < 10) {
             if (btn != null)

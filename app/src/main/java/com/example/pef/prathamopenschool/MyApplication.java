@@ -6,7 +6,7 @@ package com.example.pef.prathamopenschool;
 
 
 // MHM
-// Class for Checking internet connection
+// stdClass for Checking internet connection
 
 import android.Manifest;
 import android.app.Application;
@@ -46,7 +46,8 @@ public class MyApplication extends Application implements GpsStatus.Listener, Lo
     private static MyApplication mInstance;
     static int count, gpsFixCount;
     static Timer gpsTimer, gpsFixTimer;
-    public static String networkSSID = "PrathamHotSpot-" + Build.SERIAL;
+//    public static String networkSSID = "PrathamHotSpot-" + Build.SERIAL;
+    public static String networkSSID = "PrathamHotSpot";
     public static FTPClient ftpClient;
     private static final int NOT_AVAILABLE = -100000;
     private static final int GPS_DISABLED = 0;
@@ -66,6 +67,9 @@ public class MyApplication extends Application implements GpsStatus.Listener, Lo
     public static Location location;
     public static String sessionStartTime;
     public static String ageGrp = "0";
+
+    public static FTPClient client1;
+
 
     final Handler gpsunavailablehandler = new Handler();
     Runnable unavailr = new Runnable() {
@@ -399,4 +403,6 @@ public class MyApplication extends Application implements GpsStatus.Listener, Lo
             return null;
         }
     }
+
+
 }

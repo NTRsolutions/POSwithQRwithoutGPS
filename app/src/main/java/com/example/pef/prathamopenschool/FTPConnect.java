@@ -15,7 +15,6 @@ import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.support.v4.provider.DocumentFile;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.example.pef.prathamopenschool.ftpSettings.ConnectToHotspot;
 import com.example.pef.prathamopenschool.ftpSettings.CreateWifiAccessPoint;
@@ -73,10 +72,6 @@ public class FTPConnect implements FTPInterface.FTPConnectInterface {
                 intent.setData(Uri.parse("package:" + MyApplication.getInstance().getPackageName()));
                 MyApplication.getInstance().startActivity(intent);
             }
-
-//            // Higher API OLD Logic
-//            CreateWifiAccessPointOnHigherAPI createOneHAPI = new CreateWifiAccessPointOnHigherAPI(context);
-//            createOneHAPI.execute((Void) null);
         } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && Build.VERSION.SDK_INT <= Build.VERSION_CODES.O) {
             if (Settings.System.canWrite(MyApplication.getInstance())) {
                 new Hotspot(MyApplication.getInstance(), FTPConnect.this).start();
@@ -86,9 +81,6 @@ public class FTPConnect implements FTPInterface.FTPConnectInterface {
                 MyApplication.getInstance().startActivity(intent);
             }
 
-//            // Start HotSpot OLD Logic
-//            WifiAPController wifiAPController = new WifiAPController();
-//            wifiAPController.wifiToggle(MyApplication.networkSSID, ""/*, wifiManager*/, context);
         } else {
             // Start HotSpot (Tablet)
             CreateWifiAccessPoint createOne = new CreateWifiAccessPoint(context, activity, FTPConnect.this);
@@ -104,7 +96,6 @@ public class FTPConnect implements FTPInterface.FTPConnectInterface {
     @Override
     public void onConnectionEshtablished(boolean connected) {
         if (MyApplication.ftpClient != null && connected) {
-//            new ListFilesOnFTP(false, null, false).execute();
             new UploadTHroughFTP(typeOfFile).execute();
         } else {
             pushPullInterface.showDialog();
@@ -245,13 +236,13 @@ public class FTPConnect implements FTPInterface.FTPConnectInterface {
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-//                Gson gson = new Gson();
-//                Modal_DownloadContent download_content = gson.fromJson(jsonObject.toString(), Modal_DownloadContent.class);
-//                addContentToDatabase(download_content);
             } else if (typeOfFile.equalsIgnoreCase("TransferUsage")) {
                 //todo parse and show count of files, score and deviceId
 //                pushPullInterface.onFilesRecievedComplete(typeOfFile,"");
             } else if (typeOfFile.equalsIgnoreCase("ReceiveProfiles") && !typeOfFile.equalsIgnoreCase("ReceiveJson")) {
+                //todo parse and show count of files
+//                pushPullInterface.onFilesRecievedComplete(typeOfFile,"");
+            } else if (typeOfFile.equalsIgnoreCase("shareContent")) {
                 //todo parse and show count of files
 //                pushPullInterface.onFilesRecievedComplete(typeOfFile,"");
             }
@@ -319,9 +310,6 @@ public class FTPConnect implements FTPInterface.FTPConnectInterface {
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-//                Gson gson = new Gson();
-//                Modal_DownloadContent download_content = gson.fromJson(jsonObject.toString(), Modal_DownloadContent.class);
-//                addContentToDatabase(download_content);
             }
         }
     }
@@ -397,6 +385,12 @@ public class FTPConnect implements FTPInterface.FTPConnectInterface {
                         tempFtpClient = MyApplication.ftpClient;
                         File f = new File(Environment.getExternalStorageDirectory() + "/.POSinternal/Json");
                         new DownloadTHroughFTP(null, f, false, temp_file).execute();
+                    } else if (typeOfFile.equalsIgnoreCase("shareContent")) {
+                        tempFtpClient = MyApplication.ftpClient;
+
+                        // todo make changes
+//                        File f = new File(Environment.getExternalStorageDirectory() + "/.POSinternal/Json");
+//                        new DownloadTHroughFTP(null, f, false, temp_file).execute();
                     }
                 }
             }
@@ -439,17 +433,10 @@ public class FTPConnect implements FTPInterface.FTPConnectInterface {
     }
 
     public class UploadTHroughFTP extends AsyncTask<Void, Void, Boolean> {
-        //        DocumentFile finalDocumentFile1;
-//        File final_file1;
-//        boolean isSdCard;
         FTPClient temp = null;
         String sendingClient;
 
         public UploadTHroughFTP(String sendingClient) {
-//            this.finalDocumentFile1 = finalDocumentFile1;
-//            this.final_file1 = final_file1;
-//            this.isSdCard = isSdCard;
-//            this.name = name;
             this.sendingClient = sendingClient;
             if (temp == null) {
                 temp = MyApplication.ftpClient;
@@ -486,7 +473,6 @@ public class FTPConnect implements FTPInterface.FTPConnectInterface {
                     boolean ifDirExists = checkDirectoryExists(temp, "RecievedProfiles");
                     if (!ifDirExists)
                         temp.makeDirectory("RecievedProfiles");
-//                    temp.changeWorkingDirectory("RecievedProfiles");
                     String path = Environment.getExternalStorageDirectory() + "/.POSinternal/sharableContent";
                     File directory = new File(path);
                     File[] files = directory.listFiles();
@@ -505,7 +491,6 @@ public class FTPConnect implements FTPInterface.FTPConnectInterface {
                     boolean ifDirExists = checkDirectoryExists(temp, "RecievedJson");
                     if (!ifDirExists)
                         temp.makeDirectory("RecievedJson");
-//                    temp.changeWorkingDirectory("RecievedJson");
                     String path = Environment.getExternalStorageDirectory().toString() + "/.POSinternal/Json";
                     File directory = new File(path);
                     File[] files = directory.listFiles();
@@ -514,6 +499,24 @@ public class FTPConnect implements FTPInterface.FTPConnectInterface {
                         String data = path + "/" + files[i].getName();
                         FileInputStream in = new FileInputStream(new File(data));
                         result = temp.storeFile("/RecievedJson/" + files[i].getName(), in);
+                        Log.v("upload_result:::", files[i].getName() + "...." + result);
+                    }
+                    temp.logout();
+                    temp.disconnect();
+                } else if (sendingClient.equalsIgnoreCase("shareContent")) {
+                    // todo for share Content
+                    boolean ifDirExists = checkDirectoryExists(temp, "New Content");
+//                    if (!ifDirExists)
+                    temp.makeDirectory("New Content");
+                    // check folder exist if not found toast n disconnect
+                    String path = splashScreenVideo.fpath + "New Content";
+                    File directory = new File(path);
+                    File[] files = directory.listFiles();
+                    for (int i = 0; i < files.length; i++) {
+                        Log.d("Files", "FileName:" + files[i].getName());
+                        String data = path + "/" + files[i].getName();
+                        FileInputStream in = new FileInputStream(new File(data));
+                        result = temp.storeFile("/New Content/" + files[i].getName(), in);
                         Log.v("upload_result:::", files[i].getName() + "...." + result);
                     }
                     temp.logout();
@@ -527,6 +530,7 @@ public class FTPConnect implements FTPInterface.FTPConnectInterface {
         }
 
         boolean checkDirectoryExists(FTPClient ftpClient, String dirPath) throws IOException {
+            FTPFile[] f = ftpClient.listDirectories();
             ftpClient.changeWorkingDirectory(dirPath);
             int returnCode = ftpClient.getReplyCode();
             if (returnCode == 550) {
@@ -543,7 +547,9 @@ public class FTPConnect implements FTPInterface.FTPConnectInterface {
                     pushPullInterface.onFilesRecievedComplete("", "");
                 } else if (typeOfFile.equalsIgnoreCase("TransferProfiles")) {
                     pushPullInterface.onFilesRecievedComplete("TransferProfiles", "");
-                } else {
+                } else if (typeOfFile.equalsIgnoreCase("shareContent")) {
+                    pushPullInterface.onFilesRecievedComplete("shareContent", "");
+                } else if (typeOfFile.equalsIgnoreCase("TransferJson")) {
                     pushPullInterface.onFilesRecievedComplete("TransferJson", "");
                 }
             }
@@ -565,11 +571,6 @@ public class FTPConnect implements FTPInterface.FTPConnectInterface {
             if (service.service.getClassName().contains("ftpSettings.FsService")) {
                 return true;
             }
-/*
-            if ("ftpSettings.FsService".contains(service.service.getClassName())) {
-                return true;
-            }
-*/
         }
         return false;
     }
@@ -580,12 +581,6 @@ public class FTPConnect implements FTPInterface.FTPConnectInterface {
 
         WifiApControl apControl = WifiApControl.getApControl(wifiManager);
         if (apControl != null) {
-
-            // TURN OFF YOUR WIFI BEFORE ENABLE HOTSPOT
-            //if (isWifiOn(context) && isTurnToOn) {
-            //  turnOnOffWifi(context, false);
-            //}
-
             apControl.setWifiApEnabled(apControl.getWifiApConfiguration(),
                     isTurnToOn);
         }
@@ -598,13 +593,11 @@ public class FTPConnect implements FTPInterface.FTPConnectInterface {
         for (int i = 0; i < wifiScanList.size(); i++) {
             wifis[i] = ((wifiScanList.get(i)).toString());
         }
-//        String filtered[] = new String[wifiScanList.size()];
         ArrayList<String> filtered = new ArrayList<>();
         int counter = 0;
         for (String eachWifi : wifis) {
             String[] temp = eachWifi.split(",");
-            filtered.add(temp[0].substring(5).trim());//+"\n" + temp[2].substring(12).trim()+"\n" +temp[3].substring(6).trim();//0->SSID, 2->Key Management 3-> Strength
-//            Log.d("scanNearbyWifi: ", "" + filtered.get(counter));
+            filtered.add(temp[0].substring(5).trim());
             counter++;
         }
         return filtered;
@@ -613,7 +606,7 @@ public class FTPConnect implements FTPInterface.FTPConnectInterface {
     public void connectToPrathamHotSpot(String SSID) {
         try {
             WifiConfiguration wifiConfiguration = new WifiConfiguration();
-            wifiConfiguration.SSID = /*String.format("\"%s\"",*/ SSID;
+            wifiConfiguration.SSID = SSID;
             wifiConfiguration.priority = 99999;
             wifiConfiguration.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);
 
@@ -630,19 +623,7 @@ public class FTPConnect implements FTPInterface.FTPConnectInterface {
             }
 
             wifiManager.enableNetwork(netId, true);
-            /*try {
-                Thread.sleep(2000);
-
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }*/
             wifiManager.reconnect();
-/*            try {
-                Thread.sleep(6000);
-
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }*/
         } catch (Exception e) {
             e.printStackTrace();
         }
