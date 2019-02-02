@@ -955,8 +955,8 @@ public class MainActivity extends AppCompatActivity implements MediaPlayer.OnCom
                     });
                 }
                 // Random Content Logic
-                Collections.shuffle(cardList);// shuffle content
-//                Collections.reverse(cardList); // regular content
+//                Collections.shuffle(cardList);// shuffle content
+                Collections.reverse(cardList); // regular content
             }
             adapter.notifyDataSetChanged();
         } catch (Exception e) {

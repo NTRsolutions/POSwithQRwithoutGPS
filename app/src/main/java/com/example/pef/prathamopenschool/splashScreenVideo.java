@@ -313,7 +313,7 @@ public class splashScreenVideo extends AppCompatActivity {
                     String ver = statusDBHelper.getValue("apkVersion");
                     if (ver == null || ver.equalsIgnoreCase("null")) {
                         createDBJsonforBackup();
-                    } else if (!ver.equalsIgnoreCase("2.1.7") && !ver.equalsIgnoreCase("2.1.8") && !ver.equalsIgnoreCase("2.1.9") && !ver.equalsIgnoreCase("2.1.10") && !ver.equalsIgnoreCase("2.1.11") && !ver.equalsIgnoreCase("2.1.12") && !ver.equalsIgnoreCase("2.1.13") && !ver.equalsIgnoreCase("2.1.14") && !ver.equalsIgnoreCase("2.1.15") && !ver.equalsIgnoreCase("2.1.16") && !ver.equalsIgnoreCase("2.1.17") && !ver.equalsIgnoreCase("2.1.18") && !ver.equalsIgnoreCase("2.1.19") && !ver.equalsIgnoreCase("2.2.1")) {
+                    } else if (!ver.equalsIgnoreCase("2.1.7") && !ver.equalsIgnoreCase("2.1.8") && !ver.equalsIgnoreCase("2.1.9") && !ver.equalsIgnoreCase("2.1.10") && !ver.equalsIgnoreCase("2.1.11") && !ver.equalsIgnoreCase("2.1.12") && !ver.equalsIgnoreCase("2.1.13") && !ver.equalsIgnoreCase("2.1.14") && !ver.equalsIgnoreCase("2.1.15") && !ver.equalsIgnoreCase("2.1.16") && !ver.equalsIgnoreCase("2.1.17") && !ver.equalsIgnoreCase("2.1.18") && !ver.equalsIgnoreCase("2.1.19") && !ver.equalsIgnoreCase("2.2.1") && !ver.equalsIgnoreCase("2.2.2")) {
                         createDBJsonforBackup();
                     }
                     //check initial entries
@@ -329,7 +329,7 @@ public class splashScreenVideo extends AppCompatActivity {
                     String ver = statusDBHelper.getValue("apkVersion");
                     if (ver == null || ver.equalsIgnoreCase("null")) {
                         createDBJsonforBackup();
-                    } else if (!ver.equalsIgnoreCase("2.1.7") && !ver.equalsIgnoreCase("2.1.8") && !ver.equalsIgnoreCase("2.1.9") && !ver.equalsIgnoreCase("2.1.10") && !ver.equalsIgnoreCase("2.1.11") && !ver.equalsIgnoreCase("2.1.12") && !ver.equalsIgnoreCase("2.1.13") && !ver.equalsIgnoreCase("2.1.14") && !ver.equalsIgnoreCase("2.1.15") && !ver.equalsIgnoreCase("2.1.16") && !ver.equalsIgnoreCase("2.1.17") && !ver.equalsIgnoreCase("2.1.18") && !ver.equalsIgnoreCase("2.1.19") && !ver.equalsIgnoreCase("2.2.1")) {
+                    } else if (!ver.equalsIgnoreCase("2.1.7") && !ver.equalsIgnoreCase("2.1.8") && !ver.equalsIgnoreCase("2.1.9") && !ver.equalsIgnoreCase("2.1.10") && !ver.equalsIgnoreCase("2.1.11") && !ver.equalsIgnoreCase("2.1.12") && !ver.equalsIgnoreCase("2.1.13") && !ver.equalsIgnoreCase("2.1.14") && !ver.equalsIgnoreCase("2.1.15") && !ver.equalsIgnoreCase("2.1.16") && !ver.equalsIgnoreCase("2.1.17") && !ver.equalsIgnoreCase("2.1.18") && !ver.equalsIgnoreCase("2.1.19") && !ver.equalsIgnoreCase("2.2.1") && !ver.equalsIgnoreCase("2.2.2")) {
                         createDBJsonforBackup();
                     }
                     //check initial entries
@@ -629,10 +629,10 @@ public class splashScreenVideo extends AppCompatActivity {
         }
         if (apkType == false) {
             s = new StatusDBHelper(this);
-            s.insertInitialData("apkType", "QRCode, NonGPS, Shuffled Content"); // shuffled or regular
+            s.insertInitialData("apkType", "QRCode, NonGPS, Regular Content"); // shuffled or regular
         } else {
             s = new StatusDBHelper(this);
-            s.Update("apkType", "QRCode, NonGPS, Shuffled Content");
+            s.Update("apkType", "QRCode, NonGPS, Regular Content");
         }
         if (DBVersion == false) {
             s = new StatusDBHelper(this);

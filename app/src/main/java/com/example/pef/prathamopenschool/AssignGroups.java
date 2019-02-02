@@ -60,6 +60,8 @@ public class AssignGroups extends AppCompatActivity {
     PlayVideo playVideo;
     boolean timer;
 
+    List<String> deletedGrpIDs = new ArrayList<>();
+
     /*@Override
     public void onBackPressed() {
         super.onBackPressed();
@@ -79,6 +81,8 @@ public class AssignGroups extends AppCompatActivity {
 
         // Hide Actionbar
         getSupportActionBar().hide();
+
+        progress = new ProgressDialog(AssignGroups.this);
 
         villages_spinner = (Spinner) findViewById(R.id.spinner_selectVillage);
 
@@ -172,7 +176,6 @@ public class AssignGroups extends AppCompatActivity {
                     } else if (cnt >= 1 && cnt <= 5) {
                         try {
                             //   MultiPhotoSelectActivity.dilog.showDilog(context, "Assigning Groups");
-                            progress = new ProgressDialog(AssignGroups.this);
                             progress.setMessage("Please Wait...");
                             progress.setCanceledOnTouchOutside(false);
                             progress.show();
@@ -258,8 +261,9 @@ public class AssignGroups extends AppCompatActivity {
                                     //  MultiPhotoSelectActivity.dilog.dismissDilog();
                                     AssignGroups.this.runOnUiThread(new Runnable() {
                                         public void run() {
-                                            Toast.makeText(AssignGroups.this, " Groups Assigned Successfully !!!", Toast.LENGTH_SHORT).show();
-                                            progress.dismiss();
+                                            Toast.makeText(AssignGroups.this, " Groups Assigned Successfully !!!", Toast.LENGTH_LONG).show();
+                                            if (progress != null && progress.isShowing())
+                                                progress.dismiss();
                                         }
                                     });
                                 }
@@ -549,7 +553,7 @@ public class AssignGroups extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String selectedBlock = blocks_spinner.getSelectedItem().toString();
 
-                if (MultiPhotoSelectActivity.programID.equals("1") || MultiPhotoSelectActivity.programID.equals("3")  || MultiPhotoSelectActivity.programID.equals("10")) // H Learning
+                if (MultiPhotoSelectActivity.programID.equals("1") || MultiPhotoSelectActivity.programID.equals("3") || MultiPhotoSelectActivity.programID.equals("10")) // H Learning
                 {
                     populateVillage(selectedBlock);
                 } else if (MultiPhotoSelectActivity.programID.equals("2")) // RI
@@ -640,7 +644,11 @@ public class AssignGroups extends AppCompatActivity {
                     }
                 }
                 if (flag == false) {
-                    groupList.add(new GroupList(listJsonGrp.get(j).GroupID, listJsonGrp.get(j).GroupName));
+                    // NEW DONT ADD GROUP
+                    if (listJsonGrp.get(j).DeviceID.equalsIgnoreCase("Deleted")) {
+                        // Don't add group
+                    } else
+                        groupList.add(new GroupList(listJsonGrp.get(j).GroupID, listJsonGrp.get(j).GroupName));
                 }
 
             }
@@ -697,9 +705,7 @@ public class AssignGroups extends AppCompatActivity {
             Button btnAssign = (Button) findViewById(R.id.allocateGroups);
             btnAssign.setVisibility(View.VISIBLE);
 
-        } else
-
-        {
+        } else {
             LinearLayout my_layout = (LinearLayout) findViewById(R.id.assignGroup1);
             LinearLayout my_layout1 = (LinearLayout) findViewById(R.id.assignGroup2);
             my_layout.removeAllViews();
@@ -846,13 +852,26 @@ public class AssignGroups extends AppCompatActivity {
                 grpobj.VillageID = grpJsonObject.getInt("VillageId");
                 grpobj.ProgramID = grpJsonObject.getInt("ProgramId");
 
-                grpobj.GroupCode = grpJsonObject.getString("GroupCode");
-                grpobj.SchoolName = grpJsonObject.getString("SchoolName");
-                grpobj.VillageName = grpJsonObject.getString("VIllageName");
-                grpobj.DeviceID = grpJsonObject.getString("DeviceId");
+                try {
+                    grpobj.GroupCode = grpJsonObject.getString("GroupCode");
+                    grpobj.SchoolName = grpJsonObject.getString("SchoolName");
+                    grpobj.VillageName = grpJsonObject.getString("VIllageName");
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    grpobj.DeviceID = grpJsonObject.getString("DeviceId");
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
 
-                jsonGrpList.add(grpobj);
-
+                // New Dont Show deleted groups from Json
+                if (grpobj.DeviceID.equalsIgnoreCase("deleted")) {
+                    // Don't add deleted groups
+                    deletedGrpIDs.add(grpobj.GroupID);
+                } else {
+                    jsonGrpList.add(grpobj);
+                }
             }
 
             //db.insertData(grpobj);
